@@ -1,0 +1,1784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="NZF Services Team strategy days, 30 September and 1 October 2026.">
+<style>
+  :root{color-scheme:light dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html,body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+  #storeNote{position:fixed;left:0;right:0;bottom:0;z-index:200;margin:0;padding:9px 16px;
+    font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;text-align:center;
+    background:#16233D;color:#E9ECEF;opacity:.94}
+</style>
+</head>
+<body>
+<p id="storeNote" hidden></p>
+<title>Services Blue Sky Thinking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+/* Grey ground, navy and teal structural, beige for emphasis type only. */
+:root{
+  --paper:#F1F2F0; --surface:#FFFFFF; --surface-2:#E3E6E2;
+  --ink:#16233D; --ink-2:#33405A; --ink-3:#5A6470; --line:#D5D8D3;
+  --protect:#1D5A56; --protect-soft:#D9E5E3;
+  --prosper:#B58E4E; --prosper-soft:#F0E7D6;
+  --focus:#1D5A56; --geo-line:#D9DCD8;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#111C31; --surface:#18243C; --surface-2:#212E49;
+    --ink:#E9ECEF; --ink-2:#AEB8C4; --ink-3:#8C99A8; --line:#2B3B57;
+    --protect:#64B8AE; --protect-soft:#143733;
+    --prosper:#D6AE68; --prosper-soft:#33280F;
+    --focus:#D6AE68; --geo-line:#23304C;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111C31; --surface:#18243C; --surface-2:#212E49;
+  --ink:#E9ECEF; --ink-2:#AEB8C4; --ink-3:#8C99A8; --line:#2B3B57;
+  --protect:#64B8AE; --protect-soft:#143733;
+  --prosper:#D6AE68; --prosper-soft:#33280F;
+  --focus:#D6AE68; --geo-line:#23304C;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.06;text-wrap:balance;margin:0;letter-spacing:-.022em}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1080px;margin:0 auto;padding-block:11px;padding-left:20px;padding-right:20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--protect)}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+.nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--ink-3);padding:6px 9px;border-radius:5px}
+.nav a:hover{color:var(--ink);background:var(--surface-2)}
+.nav a.on{color:var(--protect);background:var(--protect-soft)}
+.navdd{position:relative}
+.navdd>button{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding:6px 9px;border-radius:5px;background:transparent;border:0;display:flex;align-items:center;gap:5px}
+.navdd>button:hover{color:var(--ink);background:var(--surface-2)}
+.navdd>button.on{color:var(--protect);background:var(--protect-soft)}
+.navdd>button svg{width:9px;height:9px;transition:transform .18s}
+.navdd[data-open="1"]>button svg{transform:rotate(180deg)}
+.ddpanel{position:absolute;top:calc(100% + 7px);right:0;min-width:262px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;z-index:60;box-shadow:0 14px 34px rgba(0,0,0,.14)}
+.ddpanel a{display:block;text-decoration:none;padding:9px 11px;border-radius:6px;font-family:var(--display);font-weight:500;font-size:14.5px;text-transform:none;letter-spacing:0;color:var(--ink);line-height:1.3}
+.ddpanel a:hover{background:var(--surface-2)}
+.ddpanel a.on{background:var(--protect-soft);color:var(--protect)}
+.ddpanel a small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-top:2px;letter-spacing:.04em}
+.ddpanel a.on small{color:var(--protect)}
+.ddsep{height:1px;background:var(--line);margin:6px 8px}
+@media(max-width:620px){.ddpanel{right:auto;left:0;min-width:238px}}
+
+.wrap{max-width:1080px;margin:0 auto;padding-block:0 96px;padding-left:20px;padding-right:20px}
+.narrow{max-width:680px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:14px}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-2)}
+.small{font-size:14.5px;color:var(--ink-3);line-height:1.55}
+
+.hero{padding-block:60px 44px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.geo{position:absolute;top:50%;right:-130px;transform:translateY(-50%);width:min(560px,58vw);pointer-events:none;opacity:.85}
+.geo svg{width:100%;height:auto;display:block}
+.geo .g-line{fill:none;stroke:var(--geo-line);stroke-width:1}
+.geo .g-arc{fill:none;stroke:var(--prosper);stroke-width:1.4;opacity:.55}
+.geo .g-dot{fill:var(--protect);opacity:.75}
+.hero>*:not(.geo){position:relative;z-index:1}
+@media(max-width:860px){.geo{opacity:.4;right:-200px;width:520px}}
+.phase{position:relative}
+.phase::before{content:"";position:absolute;left:-15px;top:calc(40px + .62em);width:6px;height:6px;border-radius:99px;background:var(--prosper)}
+@media(max-width:760px){.phase::before{display:none}}
+.hero h1{font-size:clamp(38px,7.4vw,70px);letter-spacing:-.035em;margin-bottom:8px}
+.hero h2{font-family:var(--display);font-weight:600;font-size:clamp(23px,4vw,40px);letter-spacing:-.025em;color:var(--protect);margin-bottom:24px}
+.datestrip{display:flex;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin-bottom:28px}
+.datestrip span{background:var(--surface);border:1px solid var(--line);padding:5px 10px;border-radius:5px}
+.hero .lede{max-width:620px}
+.quickgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:38px}
+.quick{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:17px 18px;transition:border-color .15s,transform .15s}
+.quick:hover{border-color:var(--protect);transform:translateY(-2px)}
+.quick strong{font-family:var(--display);font-weight:600;font-size:17px;display:block;margin-bottom:3px}
+.quick span{font-size:14px;color:var(--ink-3);line-height:1.45}
+.framing{padding-block:48px;border-bottom:1px solid var(--line)}
+.framing p+p{margin-top:17px}
+.pullquote{font-family:var(--display);font-weight:600;font-size:clamp(21px,3.4vw,27px);line-height:1.25;border-left:3px solid var(--prosper);padding-left:20px;margin:30px 0;text-wrap:balance}
+
+.daycard{margin-top:34px}
+.dayhead{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;padding-bottom:11px;border-bottom:2px solid var(--ink)}
+.dayhead h3{font-size:25px;letter-spacing:-.02em}
+.dayhead .small{margin-left:auto}
+.slot{display:grid;grid-template-columns:96px 1fr auto;gap:18px;align-items:start;padding-block:15px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+a.slot:hover{background:var(--surface-2)}
+.slot-time{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);padding-top:3px;font-variant-numeric:tabular-nums}
+.slot-title{font-family:var(--display);font-weight:600;font-size:17.5px;line-height:1.28}
+.slot-lead{font-size:14px;color:var(--ink-3);margin-top:3px}
+.slot-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:99px;white-space:nowrap;align-self:center}
+.tag-ready{background:var(--protect-soft);color:var(--protect)}
+.tag-open{background:var(--prosper-soft);color:var(--prosper)}
+.tag-blank{background:var(--surface-2);color:var(--ink-3)}
+.slot.break{opacity:.62}
+.slot.break .slot-title{font-family:var(--body);font-weight:400;font-size:15.5px;color:var(--ink-3)}
+@media(max-width:620px){.slot{grid-template-columns:76px 1fr;gap:13px}.slot-tag{grid-column:2;justify-self:start;margin-top:7px;align-self:start}}
+
+.sesshead{padding-block:46px 26px;border-bottom:1px solid var(--line)}
+.sesshead h1{font-size:clamp(31px,5.6vw,50px);letter-spacing:-.03em;margin-bottom:16px}
+.meta{display:flex;gap:9px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-bottom:22px}
+.meta span{background:var(--surface);border:1px solid var(--line);padding:4px 9px;border-radius:5px}
+.modebar{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:1px solid var(--ink);padding:11px 17px;border-radius:7px;text-decoration:none;display:inline-block}
+.btn:hover{opacity:.88}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);opacity:1}
+
+.readblock{padding-block:34px;border-bottom:1px solid var(--line)}
+.readblock:last-child{border-bottom:0}
+.beatnum{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.1em;margin-bottom:9px}
+.beathead{font-family:var(--display);font-weight:700;font-size:clamp(23px,3.9vw,33px);letter-spacing:-.025em;line-height:1.14;margin-bottom:15px}
+.readblock p{max-width:64ch}
+.readblock p+p{margin-top:15px}
+.phase{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--prosper);padding-top:40px;display:block}
+
+.wheelwrap{margin:26px 0;max-width:520px}
+.wheelwrap svg{width:100%;height:auto;max-width:100%;display:block}
+.wnode circle{fill:var(--surface);stroke:var(--line);stroke-width:2;transition:stroke .3s,fill .3s}
+.wnode text{font-family:var(--mono);font-size:15px;fill:var(--ink-3);transition:fill .3s}
+.wnode.lit circle{stroke-width:2.5}
+.wnode.lit.p circle{fill:var(--protect-soft);stroke:var(--protect)}
+.wnode.lit.p text{fill:var(--protect)}
+.wnode.lit.r circle{fill:var(--prosper-soft);stroke:var(--prosper)}
+.wnode.lit.r text{fill:var(--prosper)}
+.wlabel{font-family:var(--display);font-weight:600;font-size:15px;fill:var(--ink-3);transition:fill .3s}
+.wlabel.lit{fill:var(--ink)}
+.warc{fill:none;stroke:var(--line);stroke-width:2;transition:stroke .3s}
+
+.interact{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:22px;margin:26px 0}
+.prompt{font-family:var(--display);font-weight:600;font-size:clamp(18px,2.9vw,23px);line-height:1.3;color:var(--ink);margin-bottom:16px;text-wrap:balance}
+.respond{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.respond textarea{flex:1 1 260px;min-width:0;font-family:var(--body);font-size:16px;line-height:1.45;padding:11px 13px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);resize:vertical;min-height:76px}
+.respond textarea::placeholder{color:var(--ink-3)}
+.wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.card{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--protect);border-radius:7px;padding:13px 15px;font-size:15.5px;line-height:1.45}
+.card.r{border-left-color:var(--prosper)}
+.empty{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);border:1px dashed var(--line);border-radius:7px;padding:20px;text-align:center}
+.counter{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:11px;display:block}
+
+/* spectrum */
+.specrow{padding-block:15px;border-top:1px solid var(--line)}
+.specrow:first-of-type{border-top:0}
+.specname{font-family:var(--display);font-weight:600;font-size:16.5px;margin-bottom:9px}
+.specscale{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.specscale button{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:11px 4px 8px;color:var(--ink-3);font-family:var(--mono);font-size:12px;position:relative;overflow:hidden}
+.specscale button:hover{border-color:var(--protect)}
+.specscale button.picked{border-color:var(--protect);color:var(--protect);background:var(--protect-soft)}
+.specscale button i{position:absolute;left:0;bottom:0;width:100%;background:var(--protect);opacity:.22;display:block;transition:height .35s}
+.specends{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-top:7px}
+.specends span:last-child{text-align:right}
+
+/* allocate */
+.alloc{padding-block:15px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 128px;gap:16px;align-items:start}
+.alloc:first-of-type{border-top:0}
+.alloc h5{font-family:var(--display);font-weight:600;font-size:16.5px;margin:0 0 4px}
+.alloc p{font-size:14.5px;color:var(--ink-3);line-height:1.5}
+.alloc input{width:100%;font-family:var(--mono);font-size:16px;padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);text-align:right}
+.allocmean{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-top:5px;display:block;text-align:right}
+.alloctotal{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--mono);font-size:12.5px;margin-top:15px;padding-top:13px;border-top:1px solid var(--line);flex-wrap:wrap}
+.alloctotal b{font-weight:500}
+.over{color:var(--prosper)}
+@media(max-width:560px){.alloc{grid-template-columns:1fr}}
+
+/* ladder */
+.ladder{display:flex;flex-direction:column-reverse;gap:6px}
+.ladder.flat{flex-direction:column}
+.rung{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 15px;text-align:left;color:var(--ink);position:relative;overflow:hidden}
+.rung:hover{border-color:var(--protect)}
+.rung.picked{border-color:var(--protect);background:var(--protect-soft)}
+.rung b{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);font-weight:500}
+.rung strong{font-family:var(--display);font-weight:600;font-size:16px;display:block}
+.rung em{font-style:normal;font-size:14px;color:var(--ink-3);display:block;margin-top:2px;line-height:1.45}
+.rung .rlab{z-index:1}
+.rung .rcnt{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);white-space:nowrap;z-index:1}
+.rung i{position:absolute;left:0;top:0;height:100%;background:var(--protect);opacity:.13;display:block;transition:width .35s}
+
+/* the Yusuf sequence */
+.storyframe{display:grid;grid-template-columns:1fr;gap:6px;align-content:center;max-width:none}
+.styear{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:.92;color:var(--prosper);font-size:clamp(46px,9vw,124px)}
+.stlabel{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;display:block}
+.sttxt{font-family:var(--body);max-width:34ch}
+.sttxt p{font-size:clamp(16.5px,1.75vw,25px);line-height:1.38;color:var(--ink)}
+.sttxt p+p{margin-top:14px}
+.stpayoff{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.06;font-size:clamp(30px,5.4vw,66px);max-width:20ch;text-wrap:balance}
+.stpayoff b{font-weight:700;color:var(--prosper)}
+@media(min-width:940px){
+  .storyframe{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(34px,6vw,86px);align-items:center}
+}
+.strail{margin-top:30px;grid-column:1/-1}
+.strail svg{width:100%;height:auto;display:block;max-width:760px}
+.strail .rl{stroke:var(--line);stroke-width:2;stroke-linecap:round}
+.rl-done{stroke:var(--protect);stroke-width:2;stroke-linecap:round}
+.rl-tick{fill:var(--ink-3);font-family:var(--mono);font-size:11px}
+.rl-dot{fill:var(--prosper)}
+.stfade{animation:stIn .5s ease-out both}
+@keyframes stIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.stfade{animation:none}}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.compare{grid-template-columns:1fr}}
+.compare h5{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin:0 0 10px}
+
+.present{--paper:#111C31;--surface:#18243C;--surface-2:#212E49;--ink:#E9ECEF;--ink-2:#AEB8C4;--ink-3:#8C99A8;--line:#2B3B57;--protect:#64B8AE;--protect-soft:#143733;--prosper:#D6AE68;--prosper-soft:#33280F;--geo-line:#23304C;position:fixed;inset:0;z-index:100;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.present-stage{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;justify-content:center;padding:40px clamp(24px,6vw,84px)}
+.present-stage .eyebrow{font-size:13px;margin-bottom:22px}
+.pbig{font-family:var(--display);font-weight:700;letter-spacing:-.032em;line-height:1.04;font-size:clamp(34px,6.4vw,82px);text-wrap:balance}
+.pbig em{font-style:normal;color:var(--protect)}
+.pbig b{font-weight:700;color:var(--prosper)}
+.pmid{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.18;font-size:clamp(23px,3.5vw,44px);text-wrap:balance}
+.psub{font-size:clamp(17px,1.9vw,25px);line-height:1.45;color:var(--ink-2);margin-top:26px;max-width:38ch}
+.plist{margin-top:30px;display:flex;flex-direction:column;gap:13px;max-width:46ch}
+.plist div{display:flex;gap:14px;align-items:flex-start;font-size:clamp(16px,1.7vw,22px);line-height:1.36}
+.plist b{font-family:var(--mono);font-weight:500;color:var(--prosper);font-size:.82em;padding-top:.22em}
+.present .wheelwrap{max-width:min(620px,58vh);margin:18px 0 0;width:100%}
+.present .interact{margin:20px 0 0;max-width:900px;width:100%}
+.present .wall{max-height:40vh;overflow-y:auto}
+.present-stage.wheelframe{display:grid;grid-template-columns:1fr;gap:10px;align-content:center}
+@media(min-width:900px){
+  .present-stage.wheelframe{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(30px,5vw,70px);align-items:center}
+  .present-stage.wheelframe .wheelcol{grid-row:1;grid-column:2;margin:0}
+  .present-stage.wheelframe .textcol{grid-row:1;grid-column:1}
+  .present-stage.wheelframe .wheelwrap{max-width:min(660px,74vh)}
+}
+.present-bar{display:flex;align-items:center;gap:13px;flex-wrap:wrap;padding:11px clamp(16px,4vw,28px);border-top:1px solid var(--line);background:var(--surface)}
+.pnav{background:var(--surface-2);border:1px solid var(--line);color:var(--ink);width:40px;height:36px;border-radius:7px;font-size:16px;line-height:1}
+.pnav:hover{border-color:var(--protect)}
+.pnav[disabled]{opacity:.34;cursor:default}
+.pcount{font-family:var(--mono);font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.ptitle{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase;margin-left:auto;text-align:right}
+.pexit{background:transparent;border:1px solid var(--line);color:var(--ink-3);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:8px 13px;border-radius:7px}
+.pexit:hover{color:var(--ink);border-color:var(--ink)}
+.pdots{display:flex;gap:4px;flex-wrap:wrap;max-width:30vw}
+.pdots i{width:6px;height:6px;border-radius:99px;background:var(--line);display:block}
+.pdots i.on{background:var(--protect)}
+.pdots i.here{background:var(--prosper);transform:scale(1.45)}
+@media(max-width:620px){.ptitle,.pdots{display:none}}
+
+.factgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;margin-top:26px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:18px}
+.fact h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin-bottom:9px}
+.fact p{font-size:15.5px;line-height:1.5}
+.fact p+p{margin-top:9px}
+.fact a{color:var(--protect)}
+.tbc{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--prosper-soft);color:var(--prosper);padding:3px 7px;border-radius:4px;margin-top:9px}
+.mapwrap{margin-top:26px;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--surface)}
+.mapwrap svg{display:block;width:100%;height:auto}
+.maplabel{font-family:var(--mono);font-size:12.5px;fill:var(--ink-3)}
+.maproad{stroke:var(--line);stroke-linecap:round}
+.mapname{font-family:var(--display);font-weight:600;font-size:14px;fill:var(--ink-2)}
+.mapcap{padding:13px 18px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3);line-height:1.5}
+
+.readitem{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;padding-block:17px;border-bottom:1px solid var(--line)}
+.readitem h4{font-family:var(--display);font-weight:600;font-size:17.5px;margin-bottom:4px}
+.readitem p{font-size:14.5px;color:var(--ink-3);line-height:1.5;max-width:58ch}
+.mins{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);white-space:nowrap;padding-top:4px}
+.stub{background:var(--surface-2);border:1px dashed var(--line);border-radius:11px;padding:26px;margin-top:26px}
+.stub h4{font-family:var(--display);font-weight:600;font-size:19px;margin-bottom:9px}
+footer{border-top:1px solid var(--line);margin-top:70px;padding-block:26px 0}
+</style>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#/">Services <span>Blue Sky Thinking</span></a>
+    <nav class="nav" id="nav"></nav>
+  </div>
+</div>
+
+<main class="wrap" id="app"></main>
+<div id="presentRoot"></div>
+
+<script>
+/* ==========================================================
+   Services Blue Sky Thinking — NZF, 30 Sept & 1 Oct 2026
+   ========================================================== */
+
+var WHEEL = [
+  { short:"Prosperity", full:"A prosperous community", tone:"r" },
+  { short:"Protection", full:"catches its own when they fall", tone:"p" },
+  { short:"Confidence", full:"so people feel safe to take risks", tone:"p" },
+  { short:"Enterprise", full:"they build, and prosper", tone:"r" },
+  { short:"Strength",   full:"the community grows stronger", tone:"r" }
+];
+
+/* ---------------- SESSION CONTENT ---------------- */
+
+var SESSIONS = {
+
+vision: {
+  title:"Vision and strategy for programmes",
+  when:"Wednesday 30 September, 11:00 to 13:00",
+  lead:"Shakil",
+  blurb:"Two hours on where programmes go over the next ten years. The argument in full, then your groups, then back together.",
+  beats:[
+    { phase:"Setting the scene", eyebrow:"Wednesday 30 September",
+      big:"Vision and strategy for programmes", sub:"The next ten years.",
+      prose:"Two hours on direction. Not what we did last year, but where this organisation is going over a decade, and what that asks of the people in this room." },
+
+    { kind:"wall", block:"opening", phase:"Setting the scene", eyebrow:"Before we start",
+      prompt:"In a line: what is NZF for?",
+      placeholder:"First thing that comes to mind. No wrong answers.",
+      prose:"Before anything is presented, put down what you already think. We come back to this question at the very end of day two, and it is interesting to see what moves." },
+
+    { phase:"Setting the scene", eyebrow:"Why this is different",
+      big:"We usually start with updates.", sub:"Not this time.",
+      prose:"Previous years opened with each area reporting what it had done. Useful information, but the wrong use of two rare days with everyone in one room. Updates can be read. What cannot be read is a long argument about direction, tested by the people who would have to deliver it." },
+
+    { phase:"Setting the scene", eyebrow:"How to take this",
+      mid:"The direction is set. You are not being asked to vote on it.",
+      sub:"What is being asked is that you understand it properly, and that you press on it. Where something genuinely changes the thinking, it changes.",
+      prose:"This is not a session to ratify a strategy. It is a session to understand a ten-year direction well enough to carry it, and to find the places where it breaks against the work we actually do. Challenge is wanted, and the harder the better, but the question on the table is what this direction demands rather than whether to have one." },
+
+    { phase:"Setting the scene", eyebrow:"The shape of the two hours",
+      mid:"How this runs",
+      list:[
+        ["First","Thirty minutes. The whole argument, start to finish."],
+        ["Then","Fifteen minutes in your groups. What did not land."],
+        ["Then","Thirty minutes in your groups. What it would take."],
+        ["Last","Back together, and the open slot on the agenda gets decided."]
+      ],
+      prose:"Hold your questions through the first thirty minutes. There is time for all of it, and the groups afterwards are where most of the work happens." },
+
+    { phase:"The strategy", eyebrow:"Where the sector sits",
+      big:"Most Zakat organisations exist to relieve need.",
+      sub:"To catch people when they are struggling. Necessary work, and we do it well.",
+      prose:"Relief is not the mistake. It is the floor, and this organisation has spent years getting good at it. Everything that follows is built on top of that work, not instead of it." },
+
+    { phase:"The strategy", eyebrow:"The limit of it",
+      big:"Relief stops people falling.<br>It doesn't move them <b>anywhere</b>.",
+      prose:"A safety net catches, and catching is not the same as lifting. Someone helped this year is very often someone who needs help again in three years, because nothing in the intervention changed the conditions that put them there in the first place." },
+
+    { phase:"The strategy", eyebrow:"And the unit is wrong",
+      mid:"We treat poverty one person at a time. The real unit is the community.",
+      sub:"A household lifted inside a community that cannot catch anyone stays one bad month from where it started.",
+      prose:"Case-by-case work makes every individual decision defensible and the aggregate weak. Resilience is not held by households on their own, it is held by the network around them, and that is not something a caseload can build." },
+
+    { phase:"The strategy", eyebrow:"The aim",
+      big:"Drive the socioeconomic mobility of the British Muslim community.",
+      sub:"And the mechanism is the community itself.",
+      prose:"Stating the goal at community scale rather than household scale changes what counts as success. Not how many people were helped this year, but whether the community as a whole is moving." },
+
+    { phase:"The strategy", eyebrow:"The bet",
+      big:"A safety net isn't a cushion.<br>It's a <b>springboard</b>.",
+      sub:"When people know they will not hit the floor, they take the risks that move them up. They retrain, they start something, they back themselves.",
+      prose:"This is the reframe everything else rests on. The sector frames Zakat around need. This frames it around risk. A protected community is not a comfortable one, it is an ambitious one, and ambition is what compounds over a decade." },
+
+    { kind:"wheel", stage:1, phase:"The strategy",
+      prose:"Stage one. A community with something to spare, however modest." },
+    { kind:"wheel", stage:2, phase:"The strategy",
+      prose:"Stage two. That surplus is what lets the community catch its own. A safety net, but funded and run close to home rather than administered from the centre." },
+    { kind:"wheel", stage:3, phase:"The strategy",
+      prose:"Stage three, and this is the stage that is easy to miss. Being caught is not the benefit. Knowing you would be caught is the benefit, because that is what changes behaviour before anything has gone wrong." },
+    { kind:"wheel", stage:4, phase:"The strategy",
+      prose:"Stage four. People who feel safe start things. They retrain, they take the job with the lower floor and the higher ceiling, they open the workshop." },
+    { kind:"wheel", stage:5, phase:"The strategy",
+      prose:"Stage five. Those risks, in aggregate, make the community stronger, which means it can catch more people, which frees more people to rise. The wheel is now turning under its own power." },
+
+    { phase:"The strategy", eyebrow:"Making it physical",
+      mid:"A communal fund the community pays into and draws from.",
+      sub:"Not a metaphor. A real pot, with real governance, that people recognise as theirs.",
+      prose:"The flywheel stays an idea until there is something people can see, pay into and draw from. As people are steadied and begin to prosper they give back, and as they see what it does, more join and more pay in. The fund is not hoarded. What grows is its annual reach." },
+
+    { phase:"The strategy", eyebrow:"The crossover",
+      big:"Then the shift.",
+      sub:"As the community strengthens, need moves from chronic hardship to one-off crisis. At that crossover the same fund does something bigger: fewer, larger, transformational investments. Enterprise, skills, youth.",
+      prose:"Chronic need is a floor problem and it absorbs almost everything. One-off crisis is a far lighter load. When that changes, capacity is released, and the same fund can start making the small number of large bets that move a community rather than the large number of small ones that hold it steady." },
+
+    { phase:"The strategy", eyebrow:"Why that matters",
+      mid:"Relief versus empowerment stops being an argument anyone has to win.",
+      sub:"The community's own progress moves the money. It sequences itself.",
+      prose:"In most organisations this is a permanent internal fight, settled by whoever holds the budget that year and reopened the next. Here it is settled by conditions on the ground. While chronic need is high the money sits in relief because that is what the need demands. As need falls, the same rule moves it up the ladder." },
+
+    { phase:"The strategy", eyebrow:"Our role",
+      big:"Catalyst, not cornerstone.",
+      list:[
+        ["01","Start the wheel. Deliver the net, seed the fund, set one national standard."],
+        ["02","Build on what is already there. Grassroots infrastructure, local ownership."],
+        ["03","Then step back, and go where the wheel has not started turning."]
+      ],
+      prose:"NZF starts the wheel. It does not have to be the wheel. There is real grassroots infrastructure in these communities already, and the job is national coherence with local ownership rather than one national body delivering everywhere forever." },
+
+    { phase:"The strategy", eyebrow:"The measure",
+      big:"Where we most succeed,<br>we are needed <b>less</b>.",
+      sub:"Not more.",
+      prose:"Almost no charity will say this, because the incentives forbid it. Growth in reach is the usual proxy for success, and it quietly rewards permanent dependence. The honest measure of this model is communities that graduate off support, and an organisation that moves on to where the wheel has not started." },
+
+    { kind:"story", pos:0, year:"2026", label:"Ten years on · his father", phase:"The strategy",
+      prose:"When his father was made redundant, Yusuf was fourteen. He remembers the quiet in the house, the quiet of adults doing sums at the kitchen table.\n\nThey did not ask for help. Asking meant a form, a stranger, a decision made about you. His mother sold her gold instead." },
+
+    { kind:"story", pos:0.58, year:"2036", label:"The same age his father was", phase:"The strategy",
+      prose:"Ten years on, Yusuf is made redundant himself. This time none of that happens.\n\nHis local fund catches the family within the week. Not a caseworker and a wait. A top-up he had half forgotten he paid into, handled by people he knows.\n\nThe fall he is bracing for never comes." },
+
+    { kind:"story", pos:0.68, year:"+3 months", label:"What his father's generation would not recognise", phase:"The strategy",
+      prose:"Steadied, he does not go back to the job he lost.\n\nHe starts the small workshop he would never have risked with a mortgage and no net. The same fund that caught him now backs him. A stake, and a mentor two streets over." },
+
+    { kind:"story", pos:0.80, year:"2038", label:"The wheel turning", phase:"The strategy",
+      prose:"He employs three people.\n\nTwo were once caught by the fund. One now pays in." },
+
+    { kind:"story", pos:0.88, year:"By then", label:"Where we are in this story", phase:"The strategy",
+      prose:"He could not tell you what NZF is. To him it is just the fund, and the fund is just what his community does.\n\nIn his area, one of the strong ones now, that national body does very little. It moved on to the places where the wheel has not started turning yet." },
+
+    { kind:"story", pos:1, year:"She is nine", label:"His daughter", phase:"The strategy",
+      prose:"She will grow up never knowing the quiet at the kitchen table. Assuming, the way you assume the lights come on, that if her family falls the community catches them.\n\nShe will take risks her grandfather could not have imagined, because she will never feel the fear that shaped him." },
+
+    { kind:"story", pos:1, payoff:"The whole vision, in one girl who will never know she is the <b>point</b> of it.", phase:"The strategy",
+      prose:"The whole vision, in one girl who will never know she is the point of it." },
+
+    { phase:"The strategy", eyebrow:"What isn't proven",
+      mid:"Three things this rests on that I can't yet evidence",
+      list:[
+        ["01","The engine. Does giving actually rise as people see impact? The whole flywheel depends on this and it needs evidence, not assertion."],
+        ["02","The starting push. What exactly does NZF inject to get the wheel turning in a community without resources?"],
+        ["03","Needed less. Do we mean that operationally, celebrating communities that graduate off support, or is the centre permanent?"]
+      ],
+      prose:"These are the weakest points in the argument and they are on the table rather than buried. If you are looking for where to push hardest, push here." },
+
+    { kind:"wall", block:"b1", phase:"Breakout one", eyebrow:"In your groups · 15 minutes",
+      prompt:"What didn't land, and what do you want pressed on?",
+      placeholder:"Short and unfiltered. One point per send.",
+      prose:"Fifteen minutes in your groups. This block is for surfacing rather than solving, so nothing needs to be worked through or made polite first." },
+
+    { kind:"wall", block:"b2", phase:"Breakout two", eyebrow:"In your groups · 30 minutes", tone:"r",
+      prompt:"What would have to be true for this to work in the work you do? And where does it sit hardest against what you do now?",
+      placeholder:"Be specific to your own patch. The harder the better.",
+      prose:"Thirty minutes, mixed groups, so a CZP perspective is in the room while housing is being discussed and the other way round. The question is not whether this is the right direction, it is what the direction would demand of your area and where it grinds against how things work today." },
+
+    { kind:"show", show:["b1","b2"], phase:"Discussion", eyebrow:"Back together · 30 minutes",
+      mid:"Everything you sent, on the screen",
+      prose:"We work through the sharpest points in the open, then decide what goes in the one remaining open slot on the agenda." }
+  ]
+},
+
+partnerships: {
+  title:"Partnerships",
+  when:"Wednesday 30 September, 14:00 to 15:15",
+  lead:"Shakil",
+  tag:"Cross-cutting theme one",
+  blurb:"We cannot do this alone. So who is the partner, and what does working with them actually involve?",
+  beats:[
+    { phase:"The gap", eyebrow:"Cross-cutting theme one", big:"Partnerships",
+      sub:"We cannot do this alone. So who does the rest?",
+      prose:"The vision says NZF starts the wheel and the community keeps it spinning. Which means the strategy has a hole in it shaped like a partner. This session is about what fills that hole." },
+
+    { phase:"The gap", eyebrow:"The question underneath",
+      big:"Who exactly is the <b>partner</b>?",
+      sub:"We use one word for three very different answers, and they lead to completely different organisations.",
+      prose:"This sounds like a definitional question and it is actually the strategic one. Whether the partner is a community, an organisation or an intermediary decides what we fund, what we govern, what skills we need to hire, and what we become over ten years." },
+
+    { kind:"pick", exercise:"who-partner", phase:"The gap", eyebrow:"Before we go further",
+      prompt:"Your instinct: who is the partner?",
+      rungs:[
+        ["community","The community itself","Informal, unincorporated, no legal entity."],
+        ["localorg","Local community organisations","Mosques, community groups, small charities."],
+        ["national","National intermediaries","Other established bodies who already deliver at scale."],
+        ["mix","Different ones in different places","No single answer, it depends on what is already there."]
+      ],
+      prose:"Answer before the discussion rather than after. Interesting to see whether the room already agrees, and whether anyone moves by the end." },
+
+    { phase:"Option one", eyebrow:"If the partner is the community",
+      mid:"You cannot contract with a community.",
+      sub:"No legal entity. No bank account. No safeguarding policy. Nobody with the authority to sign anything, and nobody accountable when it goes wrong.",
+      prose:"A community is not an organisation. It has no constitution, no accounts and no single voice. Everything our governance assumes about a counterparty is missing. That does not make it the wrong answer, but it means the usual machinery simply does not apply." },
+
+    { phase:"Option one", eyebrow:"Which leads somewhere big",
+      big:"So do we <b>organise</b> it?",
+      sub:"If the answer is yes, NZF becomes a community organiser and not only a funder. Different skills, different timescales, different people.",
+      prose:"Community organising is a real discipline with its own methods, and it takes years rather than grant cycles. It is also nothing like what this organisation currently does or currently hires for. Worth being honest about whether that is a direction we would actually take, because it changes what NZF is." },
+
+    { phase:"Option two", eyebrow:"If the partner is a local organisation",
+      mid:"Three questions we have never properly answered",
+      list:[
+        ["01","How do we choose them? Existing relationships and who approaches us is not a strategy."],
+        ["02","How do we develop them? Most are small, stretched and volunteer-led."],
+        ["03","How do we build their capacity without making them dependent on us?"]
+      ],
+      prose:"That third one is the sharpest, because it runs directly against the vision. A partner who becomes reliant on NZF funding is the opposite of a community that carries its own. Capacity building that creates dependency has failed even when every project it funded succeeded." },
+
+    { phase:"Definitions", eyebrow:"A distinction that helps",
+      mid:"An ally is not a partner.",
+      sub:"An ally shares the aim, refers people, lends legitimacy. A partner shares delivery, money and risk. Most of what we call partnership is allyship.",
+      prose:"That is fine until we ask an ally to carry partner-level risk, which is how you end up jointly delivering something with no agreement and no clarity about who holds the safeguarding. The reverse error is just as common: smothering a relationship that only ever needed goodwill in paperwork nobody asked for." },
+
+    { phase:"The tensions", eyebrow:"What makes this hard",
+      mid:"Six tensions, none of them solvable by a better agreement",
+      list:[
+        ["01","Money. The funder is never an equal partner, however the language is dressed up."],
+        ["02","Dependency. The better we fund them, the more they need us."],
+        ["03","Variation. A partner who owns something will do it differently from us."],
+        ["04","Risk. We carry it reputationally whatever the contract says."],
+        ["05","Capacity. Grassroots partners are small, stretched and often volunteer-run."],
+        ["06","Exit. Nobody plans it, everybody eventually needs it."]
+      ],
+      prose:"These are not failures of partnership management. They are the structural conditions of doing this at all, and the question is which we mitigate and which we simply choose to live with." },
+
+    { phase:"The tensions", eyebrow:"We are not the first",
+      mid:"The sector has been arguing this for a decade.",
+      sub:"It calls it localisation: shifting money, decisions and power to local actors, and the gap between saying that and doing it.",
+      prose:"The pre-reading for this session is a Catholic agency writing honestly about capacity strengthening with its own local partners, which is structurally close to what we would be doing with mosques. Worth borrowing the thinking rather than starting from scratch." },
+
+    { kind:"spectrum", exercise:"partnerships", phase:"How much we hand over", eyebrow:"Everyone, on your phone",
+      prompt:"For each of these, where should the decision sit?",
+      left:"NZF sets it nationally", right:"The local partner owns it",
+      items:[
+        ["decide","Who gets a grant, and how much"],
+        ["elig","Eligibility criteria"],
+        ["safe","Safeguarding standards"],
+        ["data","Case records and data"],
+        ["brand","Whose name is on it"],
+        ["raise","Fundraising in the local area"]
+      ],
+      prose:"National coherence and local ownership pull against each other, and the honest answer is different for each of these. Place each one. The interesting part is not the average, it is where the room splits." },
+
+    { phase:"How much we hand over", eyebrow:"What the spread tells us",
+      mid:"Where we agree, and where we don't",
+      prose:"Anywhere the room clusters we have a working answer nobody had written down. Anywhere it splits we have found a real design decision that is currently getting made implicitly, relationship by relationship." },
+
+    { kind:"wall", block:"partnerships-line", phase:"Discussion", eyebrow:"In the room", tone:"r",
+      prompt:"What would we have to become good at that we currently aren't?",
+      placeholder:"A skill, a role, a process, a way of working.",
+      prose:"If partnership at this scale is the answer, it demands capabilities this organisation does not currently have. Naming them is more useful than agreeing that partnership matters." },
+
+    { kind:"show", show:["partnerships-line"], phase:"Close", eyebrow:"Close",
+      mid:"What we would have to become",
+      prose:"These carry into the targeting session next, because who we work through and who we choose to help are the same decision viewed from two ends." }
+  ]
+},
+
+targeting: {
+  title:"Targeting and selection",
+  when:"Wednesday 30 September, 15:30 to 16:45",
+  lead:"Shakil",
+  tag:"Cross-cutting theme two",
+  blurb:"Four different decisions we currently call one thing, and what the strategy does to all of them.",
+  beats:[
+    { phase:"Definitions", eyebrow:"Cross-cutting theme two",
+      big:"Who we choose is the strategy.",
+      sub:"Everything else is administration.",
+      prose:"You can rewrite every strategy document in the building, and if the same applications get approved on the same grounds, nothing has changed. This is where a vision either becomes real or quietly does not." },
+
+    { phase:"Definitions", eyebrow:"Four decisions, one word",
+      mid:"We call all of this selection. It is four separate decisions.",
+      list:[
+        ["Targeting","Where, and among whom, we work at all. Population level."],
+        ["Eligibility","Who could receive, under Zakat and under our rules."],
+        ["Selection","Who actually does, when we cannot help everyone."],
+        ["Assessment","How much, and what kind, once someone is chosen."]
+      ],
+      prose:"We have written rules for eligibility and for assessment. Targeting and selection, the two that carry the actual value judgements, mostly happen without ever being named." },
+
+    { phase:"Definitions", eyebrow:"The one people conflate",
+      big:"Eligibility says who <em>could</em>.<br>Selection says who <b>does</b>.",
+      sub:"Most of our process is built for eligibility, and we call it selection.",
+      prose:"Checking somebody qualifies is not choosing them. When more people qualify than we can fund, something decides between them, and right now that something is largely unwritten: who applied first, whose file was complete, who chased, and the instincts of whoever was holding it." },
+
+    { phase:"Targeting", eyebrow:"The one we barely do",
+      mid:"Targeting is the strategic decision, and we make it by accident.",
+      sub:"We are mostly demand-led. We work wherever the applications happen to come from.",
+      prose:"Being demand-led feels neutral and is not. It means we go where people already know about us, which favours places with existing networks, existing awareness and existing confidence to ask. The places furthest from us are, by definition, the ones least likely to reach us." },
+
+    { phase:"Targeting", eyebrow:"What the vision changes",
+      big:"The wheel turns at <b>community</b> level.",
+      sub:"Which makes the first question not which applicant, but which community.",
+      prose:"If the mechanism is a community catching its own, then the unit of targeting is the community, not the household. That is a genuine break from how we work now, and it raises a question we have never had to answer: should some communities be targeted over others?" },
+
+    { kind:"pick", exercise:"which-community", phase:"Targeting", eyebrow:"Everyone, on your phone",
+      prompt:"Where would you start the wheel?",
+      rungs:[
+        ["strong","The strong one","Established, relatively prosperous, active mosques and existing community infrastructure. Visible need is low. The wheel would probably turn."],
+        ["deep","The deprived one","High deprivation, high need, very little organised infrastructure and nothing to build on. The need is greatest here."],
+        ["mid","The middle one","Moderate need, some infrastructure, some capacity. Neither the easiest nor the hardest."],
+        ["all","Refuse the question","We should not be choosing between communities at all."]
+      ],
+      prose:"Start where it will work, or start where the need is greatest? These pull in opposite directions and the strategy does not obviously resolve it. The last option is a legitimate answer, not a cop-out." },
+
+    { phase:"Selection", eyebrow:"The same trade, one level down",
+      big:"Greatest need,<br>or greatest <b>leverage</b>?",
+      prose:"The person in the deepest crisis and the person whose small business could employ three people are rarely the same applicant. Both are defensible uses of Zakat. We have never written down how to weigh them against each other." },
+
+    { phase:"Selection", eyebrow:"Put concretely",
+      mid:"Someone who lost their job last month, or someone in chronic poverty?",
+      sub:"Pure need says chronic hardship, every time. The flywheel logic says the job loss, because they recover quickly and go on to contribute back.",
+      prose:"This is the most uncomfortable question in the strategy and it is worth sitting in rather than moving past. Catching the recent job loss is cheap, fast and returns someone to contributing. Chronic poverty is expensive, slow, and may never produce a giver. A model that optimises for the wheel turning will quietly drift towards the first. Whether that is acceptable, and whether it can be squared with the Zakat categories, is a real question rather than a rhetorical one." },
+
+    { kind:"allocate", exercise:"targeting", phase:"The exercise", eyebrow:"Everyone, on your phone",
+      prompt:"You have £20,000. Split it between these four.",
+      pot:20000,
+      cases:[
+        ["a","Family in arrears","Two months behind on rent, eviction notice served. Three children, both parents working part time. A one-off payment clears the arrears and stops the eviction."],
+        ["b","Retraining","Worked in retail for nine years, wants to qualify as a dental nurse. Course fees and twelve months of reduced hours."],
+        ["c","The workshop","Skilled joiner, currently employed, wants to set up alone. Tools, van and three months of runway. Says they would take on an apprentice within two years."],
+        ["d","Local fund top-up","Not one household. A contribution to a local fund that expects to catch roughly fifteen families over the year with small, fast payments."]
+      ],
+      prose:"Four composites, written to make the trade visible rather than describing any real applicant. Note that the fourth is a targeting decision rather than a selection one, which is the point. Split the money however you think it should go." },
+
+    { phase:"The exercise", eyebrow:"What the spread shows",
+      mid:"That range is our real policy.",
+      sub:"Not what the criteria say. What a room of experienced people actually does when handed the same money.",
+      prose:"If the answers cluster, we have a shared instinct and the job is to write it down. If they spread wide, applicants are currently getting very different decisions depending on who picks up the case, and that is a fairness problem before it is a strategy one." },
+
+    { kind:"wall", block:"targeting-change", phase:"Discussion", eyebrow:"In the room", tone:"r",
+      prompt:"For this strategy to work, what would targeting or selection have to do differently?",
+      placeholder:"Be concrete. A criterion, a route in, a decision rule, a unit we measure.",
+      prose:"Not whether it should change. What specifically would be different on a Monday morning." },
+
+    { kind:"show", show:["targeting-change"], phase:"Close", eyebrow:"Close",
+      mid:"What we would change",
+      prose:"These carry into the impact measures session on day two, because anything we change here has to be measurable or it will not survive the next budget round." }
+  ]
+},
+
+open: {
+  title:"Cross-cutting theme, open slot",
+  when:"Wednesday 30 September, 17:00 to 18:00",
+  lead:"Decided on day one",
+  tag:"Open slot",
+  blurb:"Deliberately left empty. The room decides at the end of the vision session.",
+  beats:[
+    { phase:"Open", eyebrow:"Open slot", big:"This one is yours.",
+      sub:"Left deliberately empty, and chosen in the room at the end of the vision session on day one.",
+      prose:"Three themes were put forward by the team ahead of the two days. Partnerships and participation have taken slots of their own. That leaves this hour, and two candidates still on the table, plus whatever surfaces in the breakouts." },
+    { phase:"Open", eyebrow:"Still on the table", mid:"The two remaining candidates",
+      list:[
+        ["01","Youth, skills and apprenticeships, building on NZF's history of funding people into trades."],
+        ["02","How poverty is changing, nationally and internationally, and where the sector is heading."]
+      ],
+      prose:"Both are live. Neither is settled, and something from the day one breakouts may well beat both of them." },
+    { kind:"wall", block:"open-suggest", phase:"Open", eyebrow:"Add to the list",
+      prompt:"Something else that deserves this hour?",
+      placeholder:"A theme that genuinely cuts across more than one area.",
+      prose:"Add anything you think has been missed. Suggestions stay visible through both days." }
+  ]
+},
+
+participation: {
+  title:"Participation of affected populations",
+  when:"Thursday 1 October, 10:00 to 11:15",
+  lead:"Shakil",
+  tag:"Cross-cutting theme four",
+  blurb:"Everyone agrees with this in principle. This session is about the practice, the purpose, and whether we are set up for it.",
+  beats:[
+    { phase:"Definitions", eyebrow:"Cross-cutting theme four",
+      big:"Participation of affected populations",
+      sub:"People affected by a decision having influence over that decision.",
+      prose:"Influence is the operative word and it is where most definitions quietly give up. Consulting people is not participation. Collecting feedback is not participation. Informing people very well is not participation. If what people say cannot change the outcome, whatever is happening is something else." },
+
+    { phase:"Definitions", eyebrow:"Why it sits apart from partnerships",
+      mid:"A partner has leverage. An applicant has a form.",
+      sub:"The power is differently distributed, so the same methods do not work.",
+      prose:"A partner can walk away, negotiate terms and say no. Someone who needs help cannot do any of those things, which is exactly why their participation has to be designed for rather than assumed." },
+
+    { phase:"Why", eyebrow:"Let's skip the easy part",
+      big:"Everyone agrees we <em>should</em>.",
+      sub:"Nobody in this room is going to argue against participation. So that is not the discussion.",
+      prose:"The interesting questions are further along: why exactly are we doing it, what does it get us, how would we actually do it, and whether this organisation is built to. Agreement in principle is cheap and it is not what makes this work." },
+
+    { kind:"pick", exercise:"part-why", phase:"Why", eyebrow:"Everyone, on your phone",
+      prompt:"Why are we doing this? Pick the one closest to your reason.",
+      rungs:[
+        ["better","It makes decisions better","People closest to the problem know things we do not."],
+        ["right","It is simply right","Dignity. People should have a say in decisions made about them."],
+        ["strategy","The strategy requires it","A community that is done to is not a mechanism, it is a caseload."],
+        ["expect","It is expected of us","The sector and our funders increasingly assume it."]
+      ],
+      prose:"These are not the same reason and they do not lead to the same design. If it is about better decisions you want input that is representative. If it is about dignity you want the most affected voices whether or not they are representative. If it is structural you are building decision-making capacity meant to outlast us. If the room is split on why, we will end up designing three different things and calling them one." },
+
+    { phase:"Why", eyebrow:"What the split means",
+      mid:"The purpose decides the method.",
+      prose:"Pick the wrong reason and you build the wrong thing well. A participation process designed for better decisions will systematically exclude the people a dignity-driven process exists to reach, and neither of them builds the community capacity the strategy actually depends on." },
+
+    { phase:"The hard part", eyebrow:"Who actually turns up",
+      big:"Participation has a <b>sample problem</b>.",
+      list:[
+        ["01","The available. People with time, which is not the people working three jobs."],
+        ["02","The articulate. Confidence in a room is not the same as insight."],
+        ["03","The already-connected. People who know us, and therefore are least like the people we are not reaching."],
+        ["04","The survivors of our own process. We only hear from people who got through it, never the ones who bounced off."]
+      ],
+      prose:"That last one is the quiet killer. Every participation exercise we run samples from people who already made it far enough into our system to be asked, which means the failures of our process are structurally invisible to the method meant to find them." },
+
+    { phase:"The hard part", eyebrow:"And the rest of it",
+      mid:"Six more reasons this is harder than it sounds",
+      list:[
+        ["01","It is slow, and the time costs somebody something."],
+        ["02","It is easily tokenistic, and everyone in the room can always tell."],
+        ["03","Nobody can speak for a community, however much we would like someone to."],
+        ["04","There is something uncomfortable about asking people in crisis to do unpaid governance."],
+        ["05","It cuts against consistency, and we answer to the Charity Commission while they do not."],
+        ["06","Ask people what they want, then do something else, and you have made it worse than never asking."]
+      ],
+      prose:"None of these are arguments against participation. They are the things that have to be designed around, and skipping them is how it becomes a line in a strategy that nothing follows." },
+
+    { phase:"The hard part", eyebrow:"The honest audit",
+      mid:"Are we actually set up for this?",
+      sub:"Whose job is it? Can a grant cycle absorb a six-week consultation? Would trustees accept a decision they did not make?",
+      prose:"Worth answering plainly before committing to anything. We currently have nobody whose role this is, timelines built for speed of decision, and a governance structure that holds the board accountable for choices this would move elsewhere. All of that is changeable and none of it is free." },
+
+    { kind:"ladder", exercise:"part-now", phase:"Where we are", eyebrow:"Everyone, on your phone",
+      prompt:"Honestly: where does NZF sit today?",
+      rungs:[
+        ["inform","We inform","We tell people what has been decided."],
+        ["consult","We consult","We ask for views, then decide ourselves."],
+        ["involve","We involve","Views demonstrably shape the outcome."],
+        ["collab","We collaborate","Decisions are made jointly with those affected."],
+        ["led","Community-led","The community decides and we support it."]
+      ],
+      prose:"Five rungs, anonymous. Place us where you actually think we are, not where the strategy says we should be. The spread appears as people answer." },
+
+    { kind:"ladder", exercise:"part-then", phase:"Where we are", eyebrow:"Same ladder", tone:"r",
+      prompt:"And where should we be in three years?",
+      rungs:[
+        ["inform","We inform","We tell people what has been decided."],
+        ["consult","We consult","We ask for views, then decide ourselves."],
+        ["involve","We involve","Views demonstrably shape the outcome."],
+        ["collab","We collaborate","Decisions are made jointly with those affected."],
+        ["led","Community-led","The community decides and we support it."]
+      ],
+      prose:"The gap between the two answers is the session. One rung is a real piece of work. Three rungs is a different organisation." },
+
+    { phase:"What it takes", eyebrow:"The honest version",
+      big:"Every rung up<br>costs us <b>control</b>.",
+      sub:"Speed, consistency and the ability to answer to a regulator all get harder as decisions move outwards.",
+      prose:"This is worth saying plainly, because participation is easy to agree with in principle and expensive in practice. Moving up the ladder is not free, and pretending otherwise is how it ends up as a line in a strategy that nothing follows." },
+
+    { kind:"wall", block:"part-step", phase:"What it takes", eyebrow:"In the room", tone:"r",
+      prompt:"What is one concrete thing that would move us up one rung?",
+      placeholder:"Something that could start within six months.",
+      prose:"Not the destination, the next step. One rung, something that could plausibly begin inside six months." },
+
+    { kind:"show", show:["part-step"], phase:"Close", eyebrow:"Close",
+      mid:"One rung",
+      prose:"We take the most achievable of these forward rather than trying to carry all of them." }
+  ]
+},
+
+close: {
+  title:"Q&A, reflection and open floor",
+  when:"Thursday 1 October, 15:45 to 17:00",
+  lead:"Everyone",
+  blurb:"Where we started, where we got to, and what happens after everyone gets back on a train.",
+  beats:[
+    { phase:"Closing", eyebrow:"Two days on", big:"Where we started.",
+      sub:"The first thing we did on Wednesday morning was answer one question, before anything had been presented.",
+      prose:"Worth looking at again now, with two days behind us." },
+
+    { kind:"compare", left:"opening", right:"closing", phase:"Closing", eyebrow:"Then and now",
+      prompt:"So, again: what is NZF for?",
+      placeholder:"Same question. Answer it as you would now.",
+      block:"closing",
+      prose:"The same question asked twice, with two days in between. Not a test, and there is no right answer. But if the two columns read differently, something landed, and if they do not, that is worth knowing too." },
+
+    { kind:"wall", block:"close-q", phase:"Open floor", eyebrow:"Open floor", tone:"r",
+      prompt:"Anything still unanswered?",
+      placeholder:"Questions, objections, things that have been nagging since yesterday.",
+      prose:"Anything that did not get its moment across the two days. Including the things that felt too awkward to raise at the time." },
+
+    { phase:"Open floor", eyebrow:"What happens next",
+      mid:"What happens after this",
+      list:[
+        ["01","Everything sent in over the two days stays on this site, on the outputs page."],
+        ["02","The open questions in the strategy need evidence, and that work gets picked up."],
+        ["03","What we agreed about selection and participation feeds into 2027 planning."]
+      ],
+      prose:"The point of putting all of this on a site rather than a flip chart is that it survives the train home." }
+  ]
+}
+};
+
+var AGENDA = [
+  { day:"Day one", date:"Wednesday 30 September 2026", note:"Finishes 6:00pm", rows:[
+    { t:"10:30", title:"Arrival", brk:true },
+    { t:"11:00", title:"Vision and strategy for programmes", lead:"Shakil · the next ten years", tag:"ready", href:"#/s/vision" },
+    { t:"13:00", title:"Lunch and Zuhr", brk:true },
+    { t:"14:00", title:"Partnerships", lead:"Shakil · cross-cutting theme one", tag:"ready", href:"#/s/partnerships" },
+    { t:"15:15", title:"Tea", brk:true },
+    { t:"15:30", title:"Targeting and selection", lead:"Shakil · cross-cutting theme two", tag:"ready", href:"#/s/targeting" },
+    { t:"16:45", title:"Tea", brk:true },
+    { t:"17:00", title:"Cross-cutting theme", lead:"Chosen in the room on day one", tag:"open", href:"#/s/open" }
+  ]},
+  { day:"Day two", date:"Thursday 1 October 2026", note:"Finishes 5:00pm", rows:[
+    { t:"09:45", title:"Arrival, tea and coffee", brk:true },
+    { t:"10:00", title:"Participation of affected populations", lead:"Shakil · cross-cutting theme four", tag:"ready", href:"#/s/participation" },
+    { t:"11:15", title:"Tea", brk:true },
+    { t:"11:30", title:"Innovative impact measures, part one", lead:"Amyn", tag:"blank", href:"#/s/impact-1" },
+    { t:"13:00", title:"Lunch and Zuhr", brk:true },
+    { t:"14:00", title:"Innovative impact measures, part two", lead:"Amyn", tag:"blank", href:"#/s/impact-2" },
+    { t:"15:30", title:"Tea", brk:true },
+    { t:"15:45", title:"Q&A, reflection and open floor", lead:"Everyone", tag:"ready", href:"#/s/close" }
+  ]}
+];
+
+var STUBS = {
+  "impact-1":{ title:"Innovative impact measures, part one", when:"Thursday 1 October, 11:30 to 13:00", lead:"Amyn", note:"Amyn is leading this session and the content is his. Nothing built here yet." },
+  "impact-2":{ title:"Innovative impact measures, part two", when:"Thursday 1 October, 14:00 to 15:30", lead:"Amyn", note:"Part two of Amyn's session. Nothing built here yet." }
+};
+
+/* ==========================================================
+   db
+   ========================================================== */
+var DB=null, WALLS={}, PICKS={}, LISTENERS=[];
+var CLIENT_ID=(function(){try{var k=localStorage.getItem("bstd_cid");if(!k){k="c"+Math.random().toString(36).slice(2,10);localStorage.setItem("bstd_cid",k);}return k;}catch(e){return "c"+Math.random().toString(36).slice(2,10);}})();
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+
+function allWallBlocks(){
+  var set={};
+  Object.keys(SESSIONS).forEach(function(k){
+    SESSIONS[k].beats.forEach(function(b){
+      if(b.block) set[b.block]=1;
+      if(b.show) b.show.forEach(function(x){set[x]=1;});
+      if(b.left) set[b.left]=1;
+      if(b.right) set[b.right]=1;
+    });
+  });
+  return Object.keys(set);
+}
+function allExercises(){
+  var set={};
+  Object.keys(SESSIONS).forEach(function(k){
+    SESSIONS[k].beats.forEach(function(b){ if(b.exercise) set[b.exercise]=1; });
+  });
+  return Object.keys(set);
+}
+
+/* ----------------------------------------------------------
+   DATA LAYER — configure one of these and live answers work.
+   Leave mode:"none" and the site works fully, responses just
+   stay on your own device.
+   ---------------------------------------------------------- */
+var STORE = {
+  mode: "none",                       // "none" | "supabase" | "jsonbin"
+
+  supabase: {
+    url:     "",                      // https://xxxxxxxx.supabase.co
+    anonKey: ""                       // the anon / publishable key (safe to publish)
+  },
+
+  jsonbin: {
+    binId:     "",                    // the bin id
+    accessKey: "",                    // an Access Key with read + update on this bin
+    pollMs:    5000                   // only the wall screen polls; see WALL_SCREEN below
+  }
+};
+
+/* Only a screen opened with ?wall on the end of the URL polls for new
+   responses. Put that on the projector. Phones submit without polling,
+   which is what keeps a JSONBin free plan inside its request budget.
+   Supabase pushes instead of polling, so this does not apply to it. */
+var WALL_SCREEN = location.search.indexOf("wall") > -1;
+
+var STORE_READY = false;
+
+function noteStore(msg){
+  var el=document.getElementById("storeNote");
+  if(el){ el.textContent=msg; el.hidden=!msg; }
+}
+
+/* ---- none: local only ---- */
+function initNone(){
+  STORE_READY = true;
+  noteStore("Live responses are not connected. Anything you send stays on this device.");
+}
+
+/* ---- supabase ---- */
+function initSupabase(){
+  var s=document.createElement("script");
+  s.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js";
+  s.onload=async function(){
+    try{
+      var sb=window.supabase.createClient(STORE.supabase.url, STORE.supabase.anonKey);
+      await sb.auth.signInAnonymously();
+      STORE.client=sb; STORE_READY=true; noteStore("");
+
+      async function pullWalls(){
+        var r=await sb.from("submissions").select("block,text,at").order("at",{ascending:false});
+        if(r.error) return;
+        allWallBlocks().forEach(function(b){ WALLS[b]=[]; });
+        (r.data||[]).forEach(function(row){
+          WALLS[row.block]=WALLS[row.block]||[];
+          WALLS[row.block].push({text:row.text||"",at:row.at||0});
+        });
+        allWallBlocks().forEach(paintWall);
+      }
+      async function pullPicks(){
+        var r=await sb.from("picks").select("exercise,payload");
+        if(r.error) return;
+        allExercises().forEach(function(e){ PICKS[e]=[]; });
+        (r.data||[]).forEach(function(row){
+          PICKS[row.exercise]=PICKS[row.exercise]||[];
+          PICKS[row.exercise].push(row.payload||{});
+        });
+        allExercises().forEach(paintExercise);
+      }
+      await pullWalls(); await pullPicks();
+
+      sb.channel("bstd")
+        .on("postgres_changes",{event:"*",schema:"public",table:"submissions"},pullWalls)
+        .on("postgres_changes",{event:"*",schema:"public",table:"picks"},pullPicks)
+        .subscribe();
+    }catch(e){ noteStore("Could not reach the response store. The site still works."); }
+  };
+  s.onerror=function(){ noteStore("Could not load the response store. The site still works."); };
+  document.head.appendChild(s);
+}
+
+/* ---- jsonbin ---- */
+var JB_STATE={submissions:[],picks:{}};
+function jbUrl(){ return "https://api.jsonbin.io/v3/b/"+STORE.jsonbin.binId; }
+function jbHeaders(){ return {"Content-Type":"application/json","X-Access-Key":STORE.jsonbin.accessKey}; }
+
+async function jbRead(){
+  var r=await fetch(jbUrl()+"/latest",{headers:jbHeaders()});
+  if(!r.ok) throw new Error("read");
+  var j=await r.json();
+  var rec=j.record||{};
+  return {submissions:rec.submissions||[], picks:rec.picks||{}};
+}
+async function jbWrite(state){
+  var r=await fetch(jbUrl(),{method:"PUT",headers:jbHeaders(),body:JSON.stringify(state)});
+  if(!r.ok) throw new Error("write");
+}
+function jbApply(state){
+  JB_STATE=state;
+  allWallBlocks().forEach(function(b){ WALLS[b]=[]; });
+  (state.submissions||[]).forEach(function(s){
+    WALLS[s.block]=WALLS[s.block]||[]; WALLS[s.block].push({text:s.text,at:s.at});
+  });
+  allWallBlocks().forEach(function(b){ (WALLS[b]||[]).sort(function(a,c){return c.at-a.at;}); paintWall(b); });
+  allExercises().forEach(function(e){ PICKS[e]=[]; });
+  Object.keys(state.picks||{}).forEach(function(k){
+    var p=state.picks[k];
+    PICKS[p.exercise]=PICKS[p.exercise]||[]; PICKS[p.exercise].push(p.values||{});
+  });
+  allExercises().forEach(paintExercise);
+}
+async function initJsonbin(){
+  try{
+    jbApply(await jbRead()); STORE_READY=true; noteStore("");
+    if(WALL_SCREEN){
+      setInterval(async function(){
+        try{ jbApply(await jbRead()); }catch(e){}
+      }, Math.max(3000, STORE.jsonbin.pollMs));
+    }
+  }catch(e){ noteStore("Could not reach the response store. The site still works."); }
+}
+/* read, append, write, then re-read and confirm it landed. Retries because
+   a whole-bin write can be overwritten by someone submitting at the same moment. */
+async function jbCommit(mutate, verify){
+  for(var attempt=0; attempt<4; attempt++){
+    try{
+      var state=await jbRead();
+      mutate(state);
+      await jbWrite(state);
+      var after=await jbRead();
+      jbApply(after);
+      if(verify(after)) return true;
+    }catch(e){}
+    await new Promise(function(r){ setTimeout(r, 250 + Math.random()*600); });
+  }
+  return false;
+}
+
+/* ---- public API used by the rest of the page ---- */
+(function initStore(){
+  if(STORE.mode==="supabase" && STORE.supabase.url) return initSupabase();
+  if(STORE.mode==="jsonbin"  && STORE.jsonbin.binId) return initJsonbin();
+  return initNone();
+})();
+
+async function sendWall(block,text){
+  var clean=String(text||"").trim().slice(0,600);
+  if(!clean) return false;
+  var stamp=Date.now();
+
+  if(STORE.mode==="supabase" && STORE.client){
+    var r=await STORE.client.from("submissions").insert({block:block,text:clean,at:stamp});
+    return !r.error;
+  }
+  if(STORE.mode==="jsonbin" && STORE.jsonbin.binId){
+    var mark=CLIENT_ID+"-"+stamp;
+    return await jbCommit(
+      function(st){ st.submissions.push({id:mark,block:block,text:clean,at:stamp}); },
+      function(st){ return (st.submissions||[]).some(function(s){ return s.id===mark; }); }
+    );
+  }
+  // none
+  WALLS[block]=WALLS[block]||[];
+  WALLS[block].unshift({text:clean,at:stamp});
+  paintWall(block);
+  return true;
+}
+
+async function savePick(exercise,values){
+  var stamp=Date.now(), key=exercise+"__"+CLIENT_ID;
+
+  if(STORE.mode==="supabase" && STORE.client){
+    var r=await STORE.client.from("picks").upsert({id:key,exercise:exercise,payload:values,at:stamp});
+    return !r.error;
+  }
+  if(STORE.mode==="jsonbin" && STORE.jsonbin.binId){
+    return await jbCommit(
+      function(st){ st.picks=st.picks||{}; st.picks[key]={exercise:exercise,values:values,at:stamp}; },
+      function(st){ return !!(st.picks&&st.picks[key]); }
+    );
+  }
+  // none
+  PICKS[exercise]=(PICKS[exercise]||[]).filter(function(_,i){ return i!==0; });
+  PICKS[exercise].unshift(values);
+  paintExercise(exercise);
+  return true;
+}
+function localPick(ex){ try{ return JSON.parse(localStorage.getItem("bstd_p_"+ex)||"{}"); }catch(e){ return {}; } }
+function setLocalPick(ex,v){ try{ localStorage.setItem("bstd_p_"+ex,JSON.stringify(v)); }catch(e){} }
+
+/* ---------- painters ---------- */
+function paintWall(block){
+  var list=WALLS[block]||[];
+  document.querySelectorAll('[data-wall="'+block+'"]').forEach(function(el){
+    var tone=el.getAttribute("data-tone")==="r"?" r":"";
+    el.innerHTML = list.length
+      ? list.map(function(s){return '<div class="card'+tone+'">'+esc(s.text)+'</div>';}).join("")
+      : '<div class="empty">'+(window.WALL_SCREEN===false&&STORE.mode==="jsonbin"?'Responses are showing on the main screen.':'Nothing yet. Responses appear here live.')+'</div>';
+  });
+  document.querySelectorAll('[data-count="'+block+'"]').forEach(function(el){
+    var n=list.length; el.textContent = n===1?"1 response":n+" responses";
+  });
+}
+
+function paintExercise(ex){
+  var rows=PICKS[ex]||[];
+  var mine=localPick(ex);
+
+  document.querySelectorAll('[data-spec="'+ex+'"]').forEach(function(root){
+    root.querySelectorAll("[data-item]").forEach(function(rowEl){
+      var item=rowEl.getAttribute("data-item");
+      var counts=[0,0,0,0,0], n=0;
+      rows.forEach(function(r){ var v=r[item]; if(v>=1&&v<=5){counts[v-1]++;n++;} });
+      rowEl.querySelectorAll("button").forEach(function(btn,idx){
+        var pct = n ? Math.round((counts[idx]/n)*100) : 0;
+        var bar = btn.querySelector("i");
+        if(bar) bar.style.height = pct + "%";
+        btn.classList.toggle("picked", mine[item] === (idx+1));
+      });
+    });
+    var c=root.querySelector("[data-exn]");
+    if(c) c.textContent = rows.length===1 ? "1 person answered" : rows.length+" people answered";
+  });
+
+  document.querySelectorAll('[data-alloc="'+ex+'"]').forEach(function(root){
+    root.querySelectorAll("[data-case]").forEach(function(wrapEl){
+      var id=wrapEl.getAttribute("data-case");
+      var sum=0,n=0;
+      rows.forEach(function(r){ var v=Number(r[id]); if(!isNaN(v)){sum+=v;n++;} });
+      var m=wrapEl.querySelector(".allocmean");
+      if(m) m.textContent = n ? ("room average £"+Math.round(sum/n).toLocaleString()) : "no answers yet";
+    });
+    var c=root.querySelector("[data-exn]");
+    if(c) c.textContent = rows.length===1 ? "1 person answered" : rows.length+" people answered";
+  });
+
+  document.querySelectorAll('[data-ladder="'+ex+'"]').forEach(function(root){
+    var counts={},n=0;
+    rows.forEach(function(r){ var v=r.rung; if(v){counts[v]=(counts[v]||0)+1;n++;} });
+    root.querySelectorAll("[data-rung]").forEach(function(btn){
+      var id=btn.getAttribute("data-rung");
+      var k=counts[id]||0;
+      var pct=n?Math.round((k/n)*100):0;
+      var bar=btn.querySelector("i"); if(bar) bar.style.width=pct+"%";
+      var lab=btn.querySelector("[data-cnt]"); if(lab) lab.textContent = n ? (k+" · "+pct+"%") : "";
+      btn.classList.toggle("picked", mine.rung===id);
+    });
+    var c=root.querySelector("[data-exn]");
+    if(c) c.textContent = n===1 ? "1 person answered" : n+" people answered";
+  });
+}
+function paintAll(){ allWallBlocks().forEach(paintWall); allExercises().forEach(paintExercise); }
+
+/* ==========================================================
+   components
+   ========================================================== */
+function cWall(b){
+  var tone=b.tone==="r"?"r":"";
+  return '<div class="interact">'+
+    '<div class="prompt">'+esc(b.prompt)+'</div>'+
+    '<div class="respond"><textarea id="ta-'+b.block+'" placeholder="'+esc(b.placeholder||"Your response")+'"></textarea></div>'+
+    '<div class="respond"><button class="btn" data-send="'+b.block+'">Send</button>'+
+      '<span class="counter" data-count="'+b.block+'" style="align-self:center;margin:0">0 responses</span></div>'+
+    '<div class="wall" data-wall="'+b.block+'" data-tone="'+tone+'"></div>'+
+  '</div>';
+}
+
+function cShow(b){
+  return '<div class="interact">'+ b.show.map(function(block){
+    return '<div style="margin-bottom:16px"><span class="counter" data-count="'+block+'">0 responses</span>'+
+           '<div class="wall" data-wall="'+block+'"></div></div>';
+  }).join("") + '</div>';
+}
+
+function cCompare(b){
+  return '<div class="interact">'+
+    '<div class="prompt">'+esc(b.prompt)+'</div>'+
+    '<div class="respond"><textarea id="ta-'+b.block+'" placeholder="'+esc(b.placeholder||"")+'"></textarea></div>'+
+    '<div class="respond"><button class="btn" data-send="'+b.block+'">Send</button></div>'+
+    '<div class="compare">'+
+      '<div><h5>Day one, before we started</h5><div class="wall" style="grid-template-columns:1fr" data-wall="'+b.left+'"></div></div>'+
+      '<div><h5>Now</h5><div class="wall" style="grid-template-columns:1fr" data-wall="'+b.right+'" data-tone="r"></div></div>'+
+    '</div>'+
+  '</div>';
+}
+
+function cSpectrum(b){
+  return '<div class="interact" data-spec="'+b.exercise+'">'+
+    '<div class="prompt">'+esc(b.prompt)+'</div>'+
+    '<span class="counter" data-exn>0 people answered</span>'+
+    '<div class="specends" style="margin:0 0 4px"><span>1 &nbsp;'+esc(b.left)+'</span><span>'+esc(b.right)+'&nbsp; 5</span></div>'+
+    b.items.map(function(it){
+      return '<div class="specrow" data-item="'+it[0]+'">'+
+        '<div class="specname">'+esc(it[1])+'</div>'+
+        '<div class="specscale">'+[1,2,3,4,5].map(function(v){
+          return '<button data-set="'+b.exercise+'|'+it[0]+'|'+v+'"><i style="height:0%"></i>'+v+'</button>';
+        }).join("")+'</div>'+
+      '</div>';
+    }).join("")+
+  '</div>';
+}
+
+function cAllocate(b){
+  return '<div class="interact" data-alloc="'+b.exercise+'">'+
+    '<div class="prompt">'+esc(b.prompt)+'</div>'+
+    '<span class="counter" data-exn>0 people answered</span>'+
+    b.cases.map(function(c){
+      return '<div class="alloc" data-case="'+c[0]+'">'+
+        '<div><h5>'+esc(c[1])+'</h5><p>'+esc(c[2])+'</p></div>'+
+        '<div><input type="number" min="0" step="500" inputmode="numeric" id="al-'+b.exercise+'-'+c[0]+'" '+
+        'data-alloc-in="'+b.exercise+'|'+c[0]+'" placeholder="0"><span class="allocmean">no answers yet</span></div>'+
+      '</div>';
+    }).join("")+
+    '<div class="alloctotal"><b data-alloctot="'+b.exercise+'">Allocated £0 of £'+b.pot.toLocaleString()+'</b>'+
+      '<button class="btn" data-allocsave="'+b.exercise+'|'+b.pot+'">Submit</button></div>'+
+  '</div>';
+}
+
+function cLadder(b,flat){
+  return '<div class="interact" data-ladder="'+b.exercise+'">'+
+    '<div class="prompt">'+esc(b.prompt)+'</div>'+
+    '<span class="counter" data-exn>0 people answered</span>'+
+    '<div class="ladder'+(flat?" flat":"")+'">'+ b.rungs.map(function(r,i){
+      return '<button class="rung" data-rung="'+r[0]+'" data-setrung="'+b.exercise+'|'+r[0]+'">'+
+        '<i style="width:0%"></i><b>'+(flat?String.fromCharCode(65+i):(i+1))+'</b>'+
+        '<span class="rlab"><strong>'+esc(r[1])+'</strong><em>'+esc(r[2])+'</em></span>'+
+        '<span class="rcnt" data-cnt></span></button>';
+    }).join("")+'</div>'+
+  '</div>';
+}
+
+function component(b){
+  if(b.kind==="wall") return cWall(b);
+  if(b.kind==="show") return cShow(b);
+  if(b.kind==="compare") return cCompare(b);
+  if(b.kind==="spectrum") return cSpectrum(b);
+  if(b.kind==="allocate") return cAllocate(b);
+  if(b.kind==="ladder") return cLadder(b,false);
+  if(b.kind==="pick") return cLadder(b,true);
+  return "";
+}
+
+/* ---------- the Yusuf sequence ---------- */
+function storyRail(pos){
+  var W=760,x0=30,x1=W-30,y=26;
+  var marks=[[0,"2026"],[0.58,"2036"],[0.80,"2038"],[1,"and on"]];
+  var px=x0+(x1-x0)*pos;
+  var o='<svg viewBox="0 0 '+W+' 56" aria-hidden="true">';
+  o+='<line class="rl" x1="'+x0+'" y1="'+y+'" x2="'+x1+'" y2="'+y+'"/>';
+  o+='<line class="rl-done" x1="'+x0+'" y1="'+y+'" x2="'+px.toFixed(1)+'" y2="'+y+'"/>';
+  marks.forEach(function(m){
+    var mx=x0+(x1-x0)*m[0];
+    o+='<line class="'+(m[0]<=pos?"rl-done":"rl")+'" x1="'+mx.toFixed(1)+'" y1="'+(y-6)+'" x2="'+mx.toFixed(1)+'" y2="'+(y+6)+'"/>';
+    o+='<text class="rl-tick" x="'+mx.toFixed(1)+'" y="'+(y+24)+'" text-anchor="'+(m[0]===0?"start":(m[0]===1?"end":"middle"))+'">'+m[1]+'</text>';
+  });
+  o+='<circle class="rl-dot" cx="'+px.toFixed(1)+'" cy="'+y+'" r="6"/>';
+  return o+'</svg>';
+}
+
+function cStory(b,present){
+  var paras=b.prose.split("\n\n").map(function(p){return '<p>'+esc(p)+'</p>';}).join("");
+  if(!present) return '<div class="sttxt" style="max-width:60ch;margin-top:12px">'+paras+'</div>';
+  if(b.payoff){
+    return '<div class="stfade" style="display:flex;flex-direction:column;justify-content:center;height:100%">'+
+      '<div class="stpayoff">'+b.payoff+'</div>'+
+      '<div class="strail">'+storyRail(1)+'</div></div>';
+  }
+  return '<div class="storyframe stfade">'+
+    '<div><span class="stlabel">'+esc(b.label||"")+'</span><div class="styear">'+esc(b.year)+'</div></div>'+
+    '<div class="sttxt">'+paras+'</div>'+
+    '<div class="strail">'+storyRail(b.pos||0)+'</div>'+
+  '</div>';
+}
+
+/* ---------- compass construction motif ---------- */
+function geoSvg(){
+  var cx=300,cy=300,R=250;
+  var o='<svg viewBox="0 0 600 600" aria-hidden="true">';
+  // the generating circle and its subdivisions, drawn as working lines
+  o+='<circle class="g-line" cx="'+cx+'" cy="'+cy+'" r="'+R+'"/>';
+  o+='<circle class="g-line" cx="'+cx+'" cy="'+cy+'" r="'+(R*0.62).toFixed(1)+'"/>';
+  o+='<circle class="g-line" cx="'+cx+'" cy="'+cy+'" r="'+(R*0.28).toFixed(1)+'"/>';
+  // twelve division points, radial working lines, and the pentad the flywheel uses
+  var i,a,x,y;
+  for(i=0;i<12;i++){
+    a=(i*30-90)*Math.PI/180;
+    x=cx+R*Math.cos(a); y=cy+R*Math.sin(a);
+    o+='<line class="g-line" x1="'+cx+'" y1="'+cy+'" x2="'+x.toFixed(1)+'" y2="'+y.toFixed(1)+'"/>';
+  }
+  // chords joining every fourth point: the star that falls out of a divided circle
+  for(i=0;i<12;i++){
+    a=(i*30-90)*Math.PI/180; var b=(((i+5)%12)*30-90)*Math.PI/180;
+    o+='<line class="g-line" x1="'+(cx+R*Math.cos(a)).toFixed(1)+'" y1="'+(cy+R*Math.sin(a)).toFixed(1)+
+       '" x2="'+(cx+R*Math.cos(b)).toFixed(1)+'" y2="'+(cy+R*Math.sin(b)).toFixed(1)+'"/>';
+  }
+  // the five flywheel stations sitting on the same construction
+  for(i=0;i<5;i++){
+    a=(i*72-90)*Math.PI/180;
+    x=cx+R*0.62*Math.cos(a); y=cy+R*0.62*Math.sin(a);
+    o+='<circle class="g-dot" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5.5"/>';
+  }
+  // one gold arc, the turn
+  o+='<path class="g-arc" d="M '+(cx+R*0.82).toFixed(1)+' '+cy+' A '+(R*0.82).toFixed(1)+' '+(R*0.82).toFixed(1)+
+     ' 0 1 1 '+(cx-R*0.82*0.5).toFixed(1)+' '+(cy-R*0.82*0.866).toFixed(1)+'"/>';
+  return o+'</svg>';
+}
+
+/* ---------- flywheel ---------- */
+function wheelSvg(stage){
+  var cx=240,cy=200,r=125;
+  var angs=[-90,-18,54,126,198];
+  var arcs=[[-76,-32],[-4,40],[68,112],[140,184],[212,256]];
+  function pt(a,rad){var t=a*Math.PI/180;return [cx+rad*Math.cos(t),cy+rad*Math.sin(t)];}
+  var out='<svg viewBox="0 0 480 400" role="img" aria-label="The flywheel: prosperity, protection, confidence, enterprise, strength">';
+  out+='<defs>'+
+    '<marker id="ahOn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">'+
+      '<path d="M 0 0 L 10 5 L 0 10 z" fill="var(--protect)"/></marker>'+
+    '<marker id="ahOff" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">'+
+      '<path d="M 0 0 L 10 5 L 0 10 z" fill="var(--line)"/></marker>'+
+  '</defs>';
+  // construction: the generating circle, its centre, and the radii that place the five stations
+  out+='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="var(--geo-line)" stroke-width="1"/>';
+  out+='<circle cx="'+cx+'" cy="'+cy+'" r="3" fill="var(--geo-line)"/>';
+  angs.forEach(function(a){
+    var e=pt(a,r);
+    out+='<line x1="'+cx+'" y1="'+cy+'" x2="'+e[0].toFixed(1)+'" y2="'+e[1].toFixed(1)+'" stroke="var(--geo-line)" stroke-width="1"/>';
+  });
+  // the pentagon those five points describe
+  out+='<polygon points="'+angs.map(function(a){var q=pt(a,r);return q[0].toFixed(1)+','+q[1].toFixed(1);}).join(" ")+
+       '" fill="none" stroke="var(--geo-line)" stroke-width="1"/>';
+  arcs.forEach(function(a,i){
+    var s=pt(a[0],r),e=pt(a[1],r);
+    var lit=(i+1)<stage;
+    out+='<path class="warc" d="M '+s[0].toFixed(1)+' '+s[1].toFixed(1)+' A '+r+' '+r+' 0 0 1 '+e[0].toFixed(1)+' '+e[1].toFixed(1)+
+         '" marker-end="url(#'+(lit?"ahOn":"ahOff")+')" style="stroke:'+(lit?"var(--protect)":"var(--line)")+'"/>';
+  });
+  angs.forEach(function(a,i){
+    var p=pt(a,r),lp=pt(a,r+46);
+    var lit=(i+1)<=stage;
+    var anchor=Math.abs(Math.cos(a*Math.PI/180))<0.3?"middle":(Math.cos(a*Math.PI/180)>0?"start":"end");
+    out+='<g class="wnode '+WHEEL[i].tone+(lit?" lit":"")+'"><circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="27"/>'+
+         '<text x="'+p[0].toFixed(1)+'" y="'+(p[1]+5).toFixed(1)+'" text-anchor="middle">'+(i+1)+'</text></g>';
+    out+='<text class="wlabel'+(lit?" lit":"")+'" x="'+lp[0].toFixed(1)+'" y="'+(lp[1]+4).toFixed(1)+'" text-anchor="'+anchor+'">'+WHEEL[i].short+'</text>';
+  });
+  return out+'</svg>';
+}
+
+/* ==========================================================
+   pages
+   ========================================================== */
+var ROUTES=[["#/","Home"],["#/agenda","Agenda"],["#/reading","Pre-reading"],["#/vision","The vision"],
+            ["#/venue","Venue"],["#/outputs","Outputs"]];
+
+var SESSION_NAV=[
+  ["#/s/vision","Vision and strategy","Day one · 11:00"],
+  ["#/s/partnerships","Partnerships","Day one · 14:00"],
+  ["#/s/targeting","Targeting and selection","Day one · 15:30"],
+  ["#/s/open","Cross-cutting theme, open","Day one · 17:00"],
+  ["sep","",""],
+  ["#/s/participation","Participation","Day two · 10:00"],
+  ["#/s/impact-1","Impact measures, part one","Day two · 11:30"],
+  ["#/s/impact-2","Impact measures, part two","Day two · 14:00"],
+  ["#/s/close","Q&A and reflection","Day two · 15:45"]
+];
+
+function renderNav(h){
+  var onSession = h.indexOf("#/s/")===0;
+  var items = ROUTES.slice(0,4).map(function(r){
+    return '<a href="'+r[0]+'" class="'+(r[0]===h?"on":"")+'">'+r[1]+'</a>';
+  }).join("");
+  items += '<span class="navdd" id="navdd"><button id="ddBtn" class="'+(onSession?"on":"")+'" aria-expanded="false">Sessions'+
+    '<svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1 L5 5 L9 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>'+
+    '</button><span class="ddpanel" id="ddPanel" hidden>'+
+    SESSION_NAV.map(function(s){
+      if(s[0]==="sep") return '<span class="ddsep"></span>';
+      return '<a href="'+s[0]+'" class="'+(s[0]===h?"on":"")+'">'+esc(s[1])+'<small>'+esc(s[2])+'</small></a>';
+    }).join("")+'</span></span>';
+  items += ROUTES.slice(4).map(function(r){
+    return '<a href="'+r[0]+'" class="'+(r[0]===h?"on":"")+'">'+r[1]+'</a>';
+  }).join("");
+  return items;
+}
+
+function pageHome(){
+  return ''+
+  '<section class="hero">'+
+    '<div class="geo">'+geoSvg()+'</div>'+
+    '<span class="eyebrow">NZF Services Team</span>'+
+    '<h1>Services Blue Sky Thinking</h1>'+
+    '<h2>Vision for the next ten years</h2>'+
+    '<div class="datestrip"><span>Wed 30 September 2026</span><span>Thu 1 October 2026</span><span>London Muslim Centre, Whitechapel</span></div>'+
+    '<p class="lede">Two days on where programmes go next. This year does not open with updates, it opens with a ten-year direction and the time to argue it into shape.</p>'+
+    '<div class="quickgrid">'+
+      '<a class="quick" href="#/agenda"><strong>The agenda</strong><span>Both days, session by session</span></a>'+
+      '<a class="quick" href="#/reading"><strong>Pre-reading</strong><span>Read this before you arrive</span></a>'+
+      '<a class="quick" href="#/venue"><strong>Venue</strong><span>Where it is and how to get there</span></a>'+
+    '</div>'+
+  '</section>'+
+  '<section class="framing narrow">'+
+    '<span class="eyebrow">What these two days are for</span>'+
+    '<p>We get everyone in one room roughly twice a year. Spending that on departmental updates has never made much sense, because updates can be read. What cannot be read is a long argument about where this organisation is going, tested by the people who would have to deliver it.</p>'+
+    '<p class="pullquote">The direction is set. What is being asked is that you understand it properly, and that you press on it.</p>'+
+    '<p>So nobody is being asked to vote on the direction. These are two days to understand a ten-year journey well enough to carry it, and to find the places where it breaks against the work we actually do. Where something genuinely changes the thinking, it changes.</p>'+
+    '<p>Bring a phone. Most sessions take live input from the room through this site, and everything sent in stays here afterwards.</p>'+
+    '<div class="modebar"><a class="btn" href="#/vision">Read the vision</a><a class="btn ghost" href="#/agenda">See the agenda</a></div>'+
+  '</section>';
+}
+
+function pageAgenda(){
+  var out='<section class="sesshead"><span class="eyebrow">Two days</span><h1>Agenda</h1>'+
+          '<p class="lede">Day one runs 11:00 to 6:00pm, day two 10:00 to 5:00pm. One slot is left open and gets decided in the room on day one.</p></section>';
+  AGENDA.forEach(function(d){
+    out+='<section class="daycard"><div class="dayhead"><h3>'+esc(d.day)+'</h3>'+
+         '<span class="small">'+esc(d.date)+'</span><span class="small">'+esc(d.note)+'</span></div>';
+    d.rows.forEach(function(r){
+      if(r.brk){
+        out+='<div class="slot break"><span class="slot-time">'+r.t+'</span><div class="slot-title">'+esc(r.title)+'</div></div>';
+      } else {
+        var txt=r.tag==="ready"?"Open it":(r.tag==="open"?"Open slot":"To come");
+        out+='<a class="slot" href="'+r.href+'"><span class="slot-time">'+r.t+'</span>'+
+             '<div><div class="slot-title">'+esc(r.title)+'</div><div class="slot-lead">'+esc(r.lead||"")+'</div></div>'+
+             '<span class="slot-tag tag-'+r.tag+'">'+txt+'</span></a>';
+      }
+    });
+    out+='</section>';
+  });
+  return out;
+}
+
+function pageSession(key){
+  var s=SESSIONS[key];
+  if(!s) return pageStub(key);
+  var out=''+
+  '<section class="sesshead">'+
+    '<span class="eyebrow">'+esc(s.tag||"Session")+'</span>'+
+    '<h1>'+esc(s.title)+'</h1>'+
+    '<div class="meta"><span>'+esc(s.when)+'</span><span>'+esc(s.lead)+'</span><span>'+s.beats.length+' beats</span></div>'+
+    '<p class="lede">'+esc(s.blurb)+'</p>'+
+    '<div class="modebar"><button class="btn" id="goPresent" data-key="'+key+'">Present mode</button>'+
+    '<a class="btn ghost" href="#/agenda">Back to agenda</a></div>'+
+  '</section>';
+  var last=null;
+  s.beats.forEach(function(b,i){
+    if(b.phase!==last){ out+='<span class="phase">'+esc(b.phase)+'</span>'; last=b.phase; }
+    out+='<section class="readblock narrow">';
+    out+='<div class="beatnum">'+String(i+1).padStart(2,"0")+'</div>';
+    if(b.kind==="wheel"){
+      out+='<div class="beathead">'+esc(WHEEL[b.stage-1].full)+'</div><div class="wheelwrap">'+wheelSvg(b.stage)+'</div>';
+    } else if(b.kind==="story"){
+      if(b.label) out+='<span class="stlabel">'+esc(b.label)+'</span>';
+      if(b.year) out+='<div class="beathead" style="color:var(--prosper)">'+esc(b.year)+'</div>';
+      if(b.payoff) out+='<div class="beathead">'+b.payoff+'</div>';
+    } else if(b.big||b.mid){
+      out+='<div class="beathead">'+(b.big||b.mid)+'</div>';
+    } else if(b.eyebrow){
+      out+='<div class="beathead" style="font-size:clamp(19px,2.6vw,24px);color:var(--ink-2)">'+esc(b.eyebrow)+'</div>';
+    }
+    if(b.list) out+='<div class="plist">'+b.list.map(function(l){return '<div><b>'+esc(l[0])+'</b><span>'+esc(l[1])+'</span></div>';}).join("")+'</div>';
+    if(b.sub) out+='<p class="lede" style="margin-top:14px">'+esc(b.sub)+'</p>';
+    out+=component(b);
+    if(b.prose) out+=b.prose.split("\n\n").map(function(p){return '<p style="margin-top:17px">'+esc(p)+'</p>';}).join("");
+    out+='</section>';
+  });
+  return out;
+}
+
+function pageVision(){
+  function sec(kicker,head,paras){
+    return '<section class="readblock narrow"><div class="beatnum">'+kicker+'</div>'+
+      (head?'<div class="beathead">'+esc(head)+'</div>':'')+
+      paras.map(function(p,i){return '<p'+(i?' style="margin-top:15px"':'')+'>'+esc(p)+'</p>';}).join("")+'</section>';
+  }
+  return ''+
+  '<section class="sesshead"><span class="eyebrow">Pre-reading · about 10 minutes</span>'+
+  '<h1>The vision</h1>'+
+  '<p class="lede">The argument in full, so that session one can go deeper rather than starting from the beginning. Read this before Wednesday.</p></section>'+
+
+  sec("01 · THE PROBLEM","Relief is a floor, not a direction",[
+    "Most Zakat organisations exist to relieve need. Somebody is struggling, we assess, we pay, they are caught. It is necessary work, it is well within the letter and spirit of Zakat, and this organisation has spent years getting good at it.",
+    "But a safety net catches. It does not lift. The person helped this year is very often the person who needs help again in three years, because the payment addressed the emergency and nothing about the conditions that produced it. Measured over a decade rather than a quarter, a great deal of relief spending produces no movement at all.",
+    "There is a second problem underneath that one. We treat poverty as something that happens to individuals, so we assess individuals, one file at a time. Every one of those decisions is defensible on its own. The aggregate is still weak, because resilience does not sit inside a household. It sits in the network around it. A family lifted inside a community that cannot catch anybody is one bad month from where it started."
+  ])+
+
+  sec("02 · THE AIM","Community mobility, not individual relief",[
+    "The aim is to drive the socioeconomic mobility of the British Muslim community as a whole, and the mechanism is the community itself.",
+    "Saying it at community scale rather than household scale changes what counts as success. The question stops being how many people we helped this year and becomes whether the community is moving. Those produce very different decisions about who to fund, what to measure, and when to stop."
+  ])+
+
+  sec("03 · THE BET","Protection is what makes ambition possible",[
+    "Here is the reframe the whole model depends on, and it is worth sitting with because it runs against how the sector usually talks.",
+    "A safety net is normally described as a cushion, something that softens a fall. Think of it instead as a springboard. When people know they will not hit the floor, they behave differently before anything has gone wrong. They retrain. They leave the safe job for the one with a higher ceiling. They start the business they have been thinking about for four years. They back themselves, because the downside has a limit.",
+    "So the sector frames Zakat around need. This frames it around risk. A protected community is not a comfortable community, it is an ambitious one, and ambition is the thing that compounds over ten years."
+  ])+
+
+  '<section class="readblock narrow"><div class="beatnum">04 · THE MECHANISM</div>'+
+  '<div class="beathead">The flywheel</div>'+
+  '<div class="wheelwrap">'+wheelSvg(5)+'</div>'+
+  '<p style="margin-top:15px">A prosperous community has something to spare, which lets it catch its own when they fall. Being caught is not really the benefit. Knowing you would be caught is the benefit, because that is what frees people to take risks. Those risks build enterprise, enterprise makes the community stronger, and a stronger community can catch more people, which frees more people to rise.</p>'+
+  '<p style="margin-top:15px">Protection and prosperity feed each other, and the wheel turns faster the longer it runs. The hard part is not the physics of it, it is the first push.</p>'+
+  '</section>'+
+
+  sec("05 · THE FUND","Making the wheel physical",[
+    "A flywheel stays an idea until there is something people can actually see, pay into and draw from. So the model makes it concrete: a communal fund, belonging to the community, with real governance.",
+    "Early on it does what relief does now. It catches people, quickly, close to home, without the form and the stranger and the decision made about you. As people are steadied and begin to prosper, they give back. And as more people see what it does, more join and more pay in.",
+    "The fund is not hoarded and the point is not a growing balance sheet. What grows is its annual reach."
+  ])+
+
+  sec("06 · THE CROSSOVER","The same fund, doing something bigger",[
+    "Then comes the shift that makes this different from simply doing relief better.",
+    "As a community strengthens, the shape of its need changes. Chronic hardship, the permanent floor problem that absorbs almost everything, gives way to one-off crisis: a job lost, an illness, a sudden bill. That is a far lighter load to carry, and carrying it releases capacity.",
+    "At that crossover the same fund starts doing something bigger. Fewer, larger, transformational investments. Enterprise. Skills. Youth. Springboards that do not just catch people but launch them.",
+    "This is the part worth understanding properly, because it is what makes the model self-sequencing. In most organisations relief versus empowerment is a permanent internal argument, settled by whoever holds the budget that year and reopened the next. Here nobody has to win it. While chronic need is high the money sits in relief, because that is what the need demands. As need falls, the same rule moves the money up the ladder. The community's own progress decides."
+  ])+
+
+  sec("07 · OUR ROLE","Catalyst, not cornerstone",[
+    "NZF starts the wheel. It does not have to be the wheel.",
+    "That means three things in practice. Deliver the net and seed the fund, so there is something to start with. Set one national standard, so that being caught does not depend on your postcode. And build on the grassroots infrastructure that already exists in these communities rather than duplicating it, which means national coherence with local ownership.",
+    "And then step back, and go to the places where the wheel has not started turning yet."
+  ])+
+
+  sec("08 · THE MEASURE","Success is being needed less",[
+    "Almost no charity will say this out loud, because the incentives forbid it. Reach is the standard proxy for success, and it quietly rewards permanent dependence: the more people who need you, the better you appear to be doing.",
+    "If this model works, the opposite happens. Communities graduate off support. Our presence in the strongest places thins out. The honest measure is not how many people we caught this year, it is how many places no longer need us to."
+  ])+
+
+  sec("09 · WHAT ISN'T PROVEN","The three open questions",[
+    "This is a serious bet rather than a finished plan, and three things it rests on cannot yet be evidenced. They are worth knowing before Wednesday, because they are the best places to push.",
+    "First, the engine. The model assumes that giving rises as people see impact. That assumption carries the entire flywheel, and it currently rests on reasoning rather than data. If it is wrong, the wheel does not turn on its own.",
+    "Second, the starting push. What exactly does NZF inject into a community with no surplus to get the wheel moving? Money is the obvious answer and probably not the whole one.",
+    "Third, needed less. Do we mean that operationally, with real communities graduating off support and a centre that shrinks in those places, or is it a figure of speech and the centre is permanent? Those are two very different organisations in 2036."
+  ]);
+}
+
+function pageReading(){
+  return ''+
+  '<section class="sesshead"><span class="eyebrow">Before you arrive</span><h1>Pre-reading</h1>'+
+  '<p class="lede">One thing, and it is short on purpose. Session one assumes you have read it.</p></section>'+
+  '<span class="phase">Essential</span>'+
+  '<div class="readitem"><div><h4><a href="#/vision" style="text-decoration:none;border-bottom:1px solid var(--line)">The vision</a></h4>'+
+  '<p>The full argument for where programmes go over the next ten years: why relief on its own does not move people, the flywheel and the communal fund behind it, what NZF\'s role becomes, and the three things the model rests on that cannot yet be evidenced. Wednesday morning starts from the assumption that everyone has read this, so it can go deeper instead of starting from scratch.</p></div><span class="mins">10 min</span></div>'+
+
+  '<span class="phase">One per session, if you have time</span>'+
+  '<p class="small" style="max-width:62ch;margin-bottom:6px">Each of the three theme sessions draws on the thinking in one piece of sector reading. Not required, but the sessions will refer to them.</p>'+
+
+  '<div class="readitem"><div><h4><a href="https://odihpn.org/en/publication/capacity-strengthening-and-localisation-perspectives-from-cafod-and-its-local-partners/" target="_blank" rel="noopener" style="text-decoration:none;border-bottom:1px solid var(--line)">Capacity strengthening and localisation</a></h4>'+
+  '<p>For the partnerships session. A faith-based agency writing honestly about working through local partners: how you choose them, how you build their capacity, and how easily that tips into dependency. Structurally close to what working through mosques would involve. Humanitarian Practice Network.</p></div><span class="mins">Partnerships</span></div>'+
+
+  '<div class="readitem"><div><h4><a href="https://www.unhcr.org/handbooks/assessment/sites/assessment/files/2023-11/UNHCR%20Targeting%20and%20Prioritization%20Mapping.pdf" target="_blank" rel="noopener" style="text-decoration:none;border-bottom:1px solid var(--line)">Targeting and prioritisation approaches</a></h4>'+
+  '<p>For the targeting session. A mapping of how targeting actually gets done in practice, and the vocabulary for separating targeting from eligibility from selection. Skim the first part rather than reading it all. UNHCR.</p></div><span class="mins">Targeting</span></div>'+
+
+  '<div class="readitem"><div><h4><a href="https://emergency.unhcr.org/sites/default/files/2024-01/4.%20The%20Core%20Humanitarian%20Standard%20on%20Quality%20and%20Accountability.pdf" target="_blank" rel="noopener" style="text-decoration:none;border-bottom:1px solid var(--line)">The Core Humanitarian Standard</a></h4>'+
+  '<p>For the participation session. The sector standard that sets out what participation and accountability to affected people actually commit an organisation to. Short, and the commitments are the part worth reading. 2024 edition.</p></div><span class="mins">Participation</span></div>'+
+
+  '<div class="readitem"><div><h4><a href="https://www.unocha.org/publications/report/world/ocha-message-accountability-affected-people" target="_blank" rel="noopener" style="text-decoration:none;border-bottom:1px solid var(--line)">Accountability to affected people</a></h4>'+
+  '<p>Also for the participation session, and the shorter of the two. A plain briefing on what accountability to affected people means in practice, why it is more than consultation, and where it usually goes wrong. Start here if you only read one. OCHA.</p></div><span class="mins">Participation</span></div>';
+}
+
+function pageVenue(){
+  var mapSvg=''+
+  '<svg viewBox="0 0 880 330" role="img" aria-label="Schematic map of Whitechapel Road showing Aldgate East station to the west, the London Muslim Centre, and Whitechapel station to the east">'+
+    '<rect x="0" y="0" width="880" height="330" fill="var(--surface)"/>'+
+    '<path class="maproad" d="M 30 172 L 850 172" stroke-width="26" opacity="0.5"/>'+
+    '<path class="maproad" d="M 30 172 L 850 172" stroke-width="2" stroke-dasharray="10 12" opacity="0.9"/>'+
+    '<path class="maproad" d="M 300 172 L 300 300" stroke-width="12" opacity="0.4"/>'+
+    '<path class="maproad" d="M 600 172 L 600 60" stroke-width="12" opacity="0.4"/>'+
+    '<text class="mapname" x="440" y="200" text-anchor="middle">Whitechapel Road</text>'+
+    '<text class="maplabel" x="310" y="292">New Road</text>'+
+    '<text class="maplabel" x="610" y="76">Vallance Road</text>'+
+    /* Aldgate East */
+    '<circle cx="120" cy="172" r="13" fill="var(--surface)" stroke="var(--ink-3)" stroke-width="3"/>'+
+    '<text class="mapname" x="120" y="132" text-anchor="middle">Aldgate East</text>'+
+    '<text class="maplabel" x="120" y="112" text-anchor="middle">8 min walk</text>'+
+    /* Whitechapel */
+    '<circle cx="770" cy="172" r="13" fill="var(--surface)" stroke="var(--ink-3)" stroke-width="3"/>'+
+    '<text class="mapname" x="770" y="132" text-anchor="middle">Whitechapel</text>'+
+    '<text class="maplabel" x="770" y="112" text-anchor="middle">5 min walk</text>'+
+    /* venue */
+    '<rect x="392" y="216" width="150" height="54" rx="9" fill="var(--protect-soft)" stroke="var(--protect)" stroke-width="2.5"/>'+
+    '<text x="467" y="240" text-anchor="middle" style="font-family:var(--display);font-weight:600;font-size:14px;fill:var(--protect)">London Muslim</text>'+
+    '<text x="467" y="258" text-anchor="middle" style="font-family:var(--display);font-weight:600;font-size:14px;fill:var(--protect)">Centre</text>'+
+    '<path d="M 467 216 L 467 186" stroke="var(--protect)" stroke-width="2.5"/>'+
+    '<circle cx="467" cy="182" r="6" fill="var(--protect)"/>'+
+    '<text class="maplabel" x="845" y="40" text-anchor="end">East</text>'+
+    '<text class="maplabel" x="35" y="40">West</text>'+
+  '</svg>';
+
+  return ''+
+  '<section class="sesshead"><span class="eyebrow">Practicalities</span><h1>Venue</h1>'+
+  '<p class="lede">Both days are in person at the London Muslim Centre in Whitechapel.</p></section>'+
+  '<div class="mapwrap">'+mapSvg+
+    '<div class="mapcap">Schematic, not to scale. The centre sits on Whitechapel Road between the two stations, with Whitechapel the closer of the pair.</div>'+
+  '</div>'+
+  '<div class="factgrid">'+
+    '<div class="fact"><h4>Where</h4><p><strong>1st Floor Boardroom</strong></p>'+
+      '<p>London Muslim Centre<br>46 Whitechapel Road<br>London E1 1JX</p>'+
+      '<p style="margin-top:11px"><a href="https://maps.google.com/?q=London+Muslim+Centre,+46+Whitechapel+Road,+London+E1+1JX" target="_blank" rel="noopener">Open in Google Maps</a></p></div>'+
+    '<div class="fact"><h4>Nearest stations</h4>'+
+      '<p><strong>Whitechapel</strong> — District, Hammersmith &amp; City, Overground and Elizabeth line. About five minutes on foot.</p>'+
+      '<p><strong>Aldgate East</strong> — District and Hammersmith &amp; City. About eight minutes.</p></div>'+
+    '<div class="fact"><h4>Buses and bikes</h4>'+
+      '<p>Routes 25, 205 and 254 run along Whitechapel Road, with more on Commercial Road and New Road.</p>'+
+      '<p>Cycle racks outside the mosque and centre, and Santander docking stations nearby.</p></div>'+
+    '<div class="fact"><h4>Driving</h4>'+
+      '<p>Not advised. There is no visitor parking at the centre and roadside parking in the area is extremely limited.</p></div>'+
+    '<div class="fact"><h4>Times</h4>'+
+      '<p><strong>Day one</strong> arrive 10:30, start 11:00, finish 6:00pm.</p>'+
+      '<p><strong>Day two</strong> arrive 9:45, start 10:00, finish 5:00pm.</p></div>'+
+    '<div class="fact"><h4>Prayers</h4>'+
+      '<p><strong>Asr 5:15pm · Maghrib 6:50pm</strong></p>'+
+      '<p>Zuhr sits inside the lunch break on both days. Asr and Maghrib are after the sessions finish, and we are in the building for both.</p>'+
+      '<p style="margin-top:11px"><a href="https://www.eastlondonmosque.org.uk/prayer-times" target="_blank" rel="noopener">Full ELM jamaah timetable</a></p></div>'+
+  '</div>';
+}
+
+function pageOutputs(){
+  var blocks=[
+    ["opening","Before we started · what is NZF for"],
+    ["b1","Session one, breakout one · what didn't land"],
+    ["b2","Session one, breakout two · what would have to be true"],
+    ["partnerships-line","Partnerships · non-negotiables and habits"],
+    ["targeting-change","Targeting · what would have to change"],
+    ["open-suggest","Open slot · suggestions"],
+    ["part-step","Participation · one rung up"],
+    ["closing","End of day two · what is NZF for"],
+    ["close-q","Open floor · still unanswered"]
+  ];
+  return ''+
+  '<section class="sesshead"><span class="eyebrow">During and after</span><h1>What came out of the room</h1>'+
+  '<p class="lede">Everything sent in across the two days lands here, so none of it evaporates on the train home.</p></section>'+
+  blocks.map(function(b){
+    return '<section class="readblock narrow"><div class="beatnum">'+esc(b[1].toUpperCase())+'</div>'+
+      '<span class="counter" data-count="'+b[0]+'">0 responses</span>'+
+      '<div class="wall" data-wall="'+b[0]+'"></div></section>';
+  }).join("");
+}
+
+function pageStub(key){
+  var s=STUBS[key];
+  if(!s) return '<section class="sesshead"><h1>Not found</h1><p class="lede">No such session.</p></section>';
+  return ''+
+  '<section class="sesshead"><span class="eyebrow">Session</span><h1>'+esc(s.title)+'</h1>'+
+  '<div class="meta"><span>'+esc(s.when)+'</span><span>'+esc(s.lead)+'</span></div></section>'+
+  '<div class="stub"><h4>Nothing built here yet</h4><p class="small">'+esc(s.note)+'</p></div>'+
+  '<section class="readblock narrow" style="padding-top:26px"><a class="btn ghost" href="#/agenda">Back to agenda</a></section>';
+}
+
+/* ==========================================================
+   present mode
+   ========================================================== */
+var pKey="vision", pIndex=0, pOpen=false;
+
+function presentFrame(i){
+  var beats=SESSIONS[pKey].beats, b=beats[i];
+  if(b.kind==="story"){
+    var so='<div class="present-stage">'+cStory(b,true)+'</div>';
+    return so+presentBar(i,beats,b);
+  }
+  var isWheel=b.kind==="wheel";
+  var out='<div class="present-stage'+(isWheel?" wheelframe":"")+'">';
+  if(isWheel){
+    out+='<div class="textcol"><span class="eyebrow">The mechanism · stage '+b.stage+' of 5</span>'+
+         '<div class="pbig" style="font-size:clamp(28px,4.4vw,56px)">'+esc(WHEEL[b.stage-1].full)+'</div></div>'+
+         '<div class="wheelcol"><div class="wheelwrap">'+wheelSvg(b.stage)+'</div></div>';
+  }
+  if(b.eyebrow&&!isWheel) out+='<span class="eyebrow">'+esc(b.eyebrow)+'</span>';
+  if(b.big) out+='<div class="pbig">'+b.big+'</div>';
+  if(b.mid&&!b.big) out+='<div class="pmid">'+esc(b.mid)+'</div>';
+  if(b.list) out+='<div class="plist">'+b.list.map(function(l){return '<div><b>'+esc(l[0])+'</b><span>'+esc(l[1])+'</span></div>';}).join("")+'</div>';
+  if(b.sub) out+='<p class="psub">'+esc(b.sub)+'</p>';
+  out+=component(b);
+  out+='</div>';
+  return out+presentBar(i,beats,b);
+}
+
+function presentBar(i,beats,b){
+  var dots=beats.map(function(_,k){return '<i class="'+(k===i?"here":(k<i?"on":""))+'"></i>';}).join("");
+  return '<div class="present-bar">'+
+    '<button class="pnav" id="pPrev" '+(i===0?"disabled":"")+' aria-label="Previous">&#8592;</button>'+
+    '<button class="pnav" id="pNext" '+(i===beats.length-1?"disabled":"")+' aria-label="Next">&#8594;</button>'+
+    '<span class="pcount">'+(i+1)+' / '+beats.length+'</span>'+
+    '<span class="pdots">'+dots+'</span>'+
+    '<span class="ptitle">'+esc(b.phase||"")+'</span>'+
+    '<button class="pexit" id="pExit">Exit</button></div>';
+}
+
+function renderPresent(){
+  var root=document.getElementById("presentRoot");
+  root.innerHTML='<div class="present">'+presentFrame(pIndex)+'</div>';
+  bind(root); paintAll();
+  document.getElementById("pPrev").onclick=function(){ if(pIndex>0){pIndex--;renderPresent();} };
+  document.getElementById("pNext").onclick=function(){ if(pIndex<SESSIONS[pKey].beats.length-1){pIndex++;renderPresent();} };
+  document.getElementById("pExit").onclick=closePresent;
+}
+function openPresent(key){ pKey=key; pOpen=true; pIndex=0; document.body.style.overflow="hidden"; renderPresent(); }
+function closePresent(){ pOpen=false; document.body.style.overflow=""; document.getElementById("presentRoot").innerHTML=""; }
+
+document.addEventListener("keydown",function(e){
+  if(!pOpen) return;
+  var tag=(e.target&&e.target.tagName)||"";
+  if(tag==="TEXTAREA"||tag==="INPUT") return;
+  var n=SESSIONS[pKey].beats.length;
+  if(e.key==="ArrowRight"||e.key===" "||e.key==="PageDown"){ if(pIndex<n-1){pIndex++;renderPresent();} e.preventDefault(); }
+  else if(e.key==="ArrowLeft"||e.key==="PageUp"){ if(pIndex>0){pIndex--;renderPresent();} e.preventDefault(); }
+  else if(e.key==="Escape"){ closePresent(); }
+});
+
+/* ==========================================================
+   binding
+   ========================================================== */
+function bind(scope){
+  scope.querySelectorAll("[data-send]").forEach(function(btn){
+    btn.onclick=async function(){
+      var block=btn.getAttribute("data-send");
+      var ta=scope.querySelector("#ta-"+block);
+      if(!ta||!ta.value.trim()) return;
+      var orig=btn.textContent; btn.textContent="Sending";
+      var ok=await sendWall(block,ta.value);
+      if(ok){ ta.value=""; btn.textContent="Sent"; } else { btn.textContent="Not sent"; }
+      setTimeout(function(){btn.textContent=orig;},1400);
+    };
+  });
+
+  scope.querySelectorAll("[data-set]").forEach(function(btn){
+    btn.onclick=async function(){
+      var p=btn.getAttribute("data-set").split("|");
+      var ex=p[0], item=p[1], val=Number(p[2]);
+      var mine=localPick(ex); mine[item]=val; setLocalPick(ex,mine);
+      paintExercise(ex);
+      await savePick(ex,mine);
+    };
+  });
+
+  scope.querySelectorAll("[data-allocsave]").forEach(function(btn){
+    btn.onclick=async function(){
+      var p=btn.getAttribute("data-allocsave").split("|");
+      var ex=p[0];
+      var mine={};
+      scope.querySelectorAll('[data-alloc-in^="'+ex+'|"]').forEach(function(inp){
+        var id=inp.getAttribute("data-alloc-in").split("|")[1];
+        var v=Number(inp.value); if(!isNaN(v)&&v>0) mine[id]=v;
+      });
+      setLocalPick(ex,mine);
+      var orig=btn.textContent; btn.textContent="Sending";
+      var ok=await savePick(ex,mine);
+      btn.textContent = ok ? "Submitted" : "Not sent";
+      setTimeout(function(){btn.textContent=orig;},1600);
+    };
+  });
+
+  scope.querySelectorAll("[data-alloc-in]").forEach(function(inp){
+    var ex=inp.getAttribute("data-alloc-in").split("|")[0];
+    var saved=localPick(ex);
+    var id=inp.getAttribute("data-alloc-in").split("|")[1];
+    if(saved[id]) inp.value=saved[id];
+    inp.oninput=function(){
+      var tot=0;
+      scope.querySelectorAll('[data-alloc-in^="'+ex+'|"]').forEach(function(x){
+        var v=Number(x.value); if(!isNaN(v)) tot+=v;
+      });
+      var el=scope.querySelector('[data-alloctot="'+ex+'"]');
+      if(el){
+        var pot=Number((scope.querySelector('[data-allocsave^="'+ex+'|"]')||{getAttribute:function(){return ex+"|0";}}).getAttribute("data-allocsave").split("|")[1]);
+        el.textContent="Allocated £"+tot.toLocaleString()+" of £"+pot.toLocaleString();
+        el.classList.toggle("over", tot>pot);
+      }
+    };
+  });
+
+  scope.querySelectorAll("[data-setrung]").forEach(function(btn){
+    btn.onclick=async function(){
+      var p=btn.getAttribute("data-setrung").split("|");
+      var ex=p[0], rung=p[1];
+      var mine={rung:rung}; setLocalPick(ex,mine);
+      paintExercise(ex);
+      await savePick(ex,mine);
+    };
+  });
+}
+
+/* ==========================================================
+   router
+   ========================================================== */
+function render(){
+  var h=location.hash||"#/";
+  var app=document.getElementById("app");
+  var html;
+  if(h==="#/") html=pageHome();
+  else if(h==="#/agenda") html=pageAgenda();
+  else if(h==="#/reading") html=pageReading();
+  else if(h==="#/vision") html=pageVision();
+  else if(h==="#/venue") html=pageVenue();
+  else if(h==="#/outputs") html=pageOutputs();
+  else if(h.indexOf("#/s/")===0) html=pageSession(h.replace("#/s/",""));
+  else html=pageHome();
+  app.innerHTML=html;
+
+  document.getElementById("nav").innerHTML=renderNav(h);
+  var dd=document.getElementById("navdd"), ddb=document.getElementById("ddBtn"), ddp=document.getElementById("ddPanel");
+  if(ddb){
+    ddb.onclick=function(e){
+      e.stopPropagation();
+      var open=dd.getAttribute("data-open")==="1";
+      dd.setAttribute("data-open",open?"0":"1");
+      ddp.hidden=open;
+      ddb.setAttribute("aria-expanded",open?"false":"true");
+    };
+    document.addEventListener("click",function(){
+      if(dd.getAttribute("data-open")==="1"){ dd.setAttribute("data-open","0"); ddp.hidden=true; ddb.setAttribute("aria-expanded","false"); }
+    });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!ddp.hidden){ dd.setAttribute("data-open","0"); ddp.hidden=true; } });
+  }
+
+  var gp=document.getElementById("goPresent");
+  if(gp) gp.onclick=function(){ openPresent(gp.getAttribute("data-key")); };
+
+  bind(app); paintAll(); window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",render);
+render();
+</script>
+
+<footer class="wrap">
+  <p class="small">NZF Services Team · Services Blue Sky Thinking · 30 September and 1 October 2026</p>
+</footer>
+
+</body>
+</html>
