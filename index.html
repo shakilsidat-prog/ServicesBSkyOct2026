@@ -861,11 +861,11 @@ function allExercises(){
    stay on your own device.
    ---------------------------------------------------------- */
 var STORE = {
-  mode: "none",                       // "none" | "supabase" | "jsonbin"
+  mode: "supabase",                   // "none" | "supabase" | "jsonbin"
 
   supabase: {
-    url:     "",                      // https://xxxxxxxx.supabase.co
-    anonKey: ""                       // the anon / publishable key (safe to publish)
+    url:     "https://bqfkiqzlhrhkkoedhyna.supabase.co",
+    anonKey: "sb_publishable_WiYobwdpMJUB07floOVTNA_Ds_wcJ4E"
   },
 
   jsonbin: {
@@ -930,7 +930,7 @@ function initSupabase(){
         .on("postgres_changes",{event:"*",schema:"public",table:"submissions"},pullWalls)
         .on("postgres_changes",{event:"*",schema:"public",table:"picks"},pullPicks)
         .subscribe();
-    }catch(e){ noteStore("Could not reach the response store. The site still works."); }
+    }catch(e){ console.error("[store]",e); noteStore("Response store error: "+(e&&e.message?e.message:"unknown")+" — the site still works."); }
   };
   s.onerror=function(){ noteStore("Could not load the response store. The site still works."); };
   document.head.appendChild(s);
@@ -1007,6 +1007,7 @@ async function sendWall(block,text){
 
   if(STORE.mode==="supabase" && STORE.client){
     var r=await STORE.client.from("submissions").insert({block:block,text:clean,at:stamp});
+    if(r.error){ console.error("[store] insert failed",r.error); noteStore("Could not send: "+r.error.message); }
     return !r.error;
   }
   if(STORE.mode==="jsonbin" && STORE.jsonbin.binId){
