@@ -209,6 +209,22 @@ a.slot:hover{background:var(--surface-2)}
 .rung .rcnt{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);white-space:nowrap;z-index:1}
 .rung i{position:absolute;left:0;top:0;height:100%;background:var(--protect);opacity:.13;display:block;transition:width .35s}
 
+/* the golden thread */
+.thread{position:relative;padding-left:32px;margin:24px 0;max-width:760px}
+.thread::before{content:"";position:absolute;left:10px;top:26px;bottom:38px;width:2px;background:var(--prosper);opacity:.85}
+.tier{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:15px 18px;margin-bottom:10px}
+.tier::before{content:"";position:absolute;left:-27px;top:22px;width:12px;height:12px;border-radius:99px;background:var(--prosper);box-shadow:0 0 0 3px var(--paper)}
+.tier h5{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin:0 0 5px}
+.tname{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.015em}
+.ttag{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;background:var(--prosper-soft);color:var(--prosper);padding:2px 7px;border-radius:99px}
+.tnum{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-left:auto}
+.tshape{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--ink-3);margin-bottom:7px}
+.tdoes{font-family:var(--body);font-size:16px;line-height:1.45;color:var(--ink-2)}
+.tentry{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--prosper);padding-top:4px}
+.present .thread{max-width:860px;width:100%;margin:14px 0 0}
+.present .tdoes{font-size:clamp(14px,1.35vw,18px)}
+.present .tname{font-size:clamp(16px,1.6vw,22px)}
+
 /* the Yusuf sequence */
 .storyframe{display:grid;grid-template-columns:1fr;gap:6px;align-content:center;max-width:none}
 .styear{font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:.92;color:var(--prosper);font-size:clamp(46px,9vw,124px)}
@@ -324,7 +340,7 @@ vision: {
   title:"Vision and strategy for programmes",
   when:"Wednesday 30 September, 11:00 to 13:00",
   lead:"Shakil",
-  blurb:"Two hours on where programmes go over the next ten years. The argument in full, then your groups, then back together.",
+  blurb:"Where programmes go over the next ten years. The flywheel, then the fund and the golden thread, then what it looks like when it works.",
   beats:[
     { phase:"Setting the scene", eyebrow:"Wednesday 30 September",
       big:"Vision and strategy for programmes", sub:"The next ten years.",
@@ -342,128 +358,166 @@ vision: {
     { phase:"Setting the scene", eyebrow:"How to take this",
       mid:"The direction is set. You are not being asked to vote on it.",
       sub:"What is being asked is that you understand it properly, and that you press on it. Where something genuinely changes the thinking, it changes.",
-      prose:"This is not a session to ratify a strategy. It is a session to understand a ten-year direction well enough to carry it, and to find the places where it breaks against the work we actually do. Challenge is wanted, and the harder the better, but the question on the table is what this direction demands rather than whether to have one." },
+      prose:"This is a concept rather than a plan. It is meant to show a direction and be built on, not signed off. Challenge is wanted, and the harder the better, but the question on the table is what this direction demands rather than whether to have one." },
 
     { phase:"Setting the scene", eyebrow:"The shape of the two hours",
       mid:"How this runs",
       list:[
-        ["First","Thirty minutes. The whole argument, start to finish."],
-        ["Then","Fifteen minutes in your groups. What did not land."],
-        ["Then","Thirty minutes in your groups. What it would take."],
-        ["Last","Back together, and the open slot on the agenda gets decided."]
+        ["One","The flywheel. What the model is and why. Then your questions."],
+        ["Two","The fund and the golden thread. How it becomes real. Then your questions."],
+        ["Three","What it looks like when it works, ten years out."],
+        ["Then","Half an hour in your groups, and the open slot on the agenda gets decided."]
       ],
-      prose:"Hold your questions through the first thirty minutes. There is time for all of it, and the groups afterwards are where most of the work happens." },
+      prose:"Three blocks with room to argue after the first two. Hold the big questions to the end of each block rather than the end of the session." },
 
-    { phase:"The strategy", eyebrow:"Where the sector sits",
-      big:"Most Zakat organisations exist to relieve need.",
-      sub:"To catch people when they are struggling. Necessary work, and we do it well.",
-      prose:"Relief is not the mistake. It is the floor, and this organisation has spent years getting good at it. Everything that follows is built on top of that work, not instead of it." },
+    /* ---------------- BLOCK ONE: THE FLYWHEEL ---------------- */
 
-    { phase:"The strategy", eyebrow:"The limit of it",
+    { phase:"The flywheel", eyebrow:"The concept",
+      big:"Not relief. <b>Mobility</b>.",
+      sub:"Not one person at a time. The community, as the unit.",
+      prose:"Most Zakat organisations exist to relieve need, to catch people when they fall. This aims further: to drive the socioeconomic mobility of the community itself." },
+
+    { phase:"The flywheel", eyebrow:"The issue",
       big:"Relief stops people falling.<br>It doesn't move them <b>anywhere</b>.",
-      prose:"A safety net catches, and catching is not the same as lifting. Someone helped this year is very often someone who needs help again in three years, because nothing in the intervention changed the conditions that put them there in the first place." },
+      sub:"Someone is caught, steadied, and left roughly where they started, until the next shock.",
+      prose:"Do that well for long enough and you have built a very good catching service, not a community that needs it less over time." },
 
-    { phase:"The strategy", eyebrow:"And the unit is wrong",
-      mid:"We treat poverty one person at a time. The real unit is the community.",
-      sub:"A household lifted inside a community that cannot catch anyone stays one bad month from where it started.",
-      prose:"Case-by-case work makes every individual decision defensible and the aggregate weak. Resilience is not held by households on their own, it is held by the network around them, and that is not something a caseload can build." },
+    { phase:"The flywheel", eyebrow:"And the unit is wrong",
+      mid:"A family can be rescued without the street around them changing at all.",
+      prose:"Relief treats poverty one person at a time, when the real unit is the community. Case by case work makes every individual decision defensible and the aggregate weak, because resilience is not held by households on their own. It is held by the network around them." },
 
-    { phase:"The strategy", eyebrow:"The aim",
+    { phase:"The flywheel", eyebrow:"The objective",
       big:"Drive the socioeconomic mobility of the British Muslim community.",
-      sub:"And the mechanism is the community itself.",
+      sub:"Not catch people. Move them.",
       prose:"Stating the goal at community scale rather than household scale changes what counts as success. Not how many people were helped this year, but whether the community as a whole is moving." },
 
-    { phase:"The strategy", eyebrow:"The bet",
+    { phase:"The flywheel", eyebrow:"The bet",
       big:"A safety net isn't a cushion.<br>It's a <b>springboard</b>.",
-      sub:"When people know they will not hit the floor, they take the risks that move them up. They retrain, they start something, they back themselves.",
-      prose:"This is the reframe everything else rests on. The sector frames Zakat around need. This frames it around risk. A protected community is not a comfortable one, it is an ambitious one, and ambition is what compounds over a decade." },
+      sub:"When people know they won't hit the floor, they take the risks that move them up. They retrain, start something, back themselves.",
+      prose:"Protection is not the opposite of ambition, it unlocks it. The sector frames Zakat around need. This frames it around risk, and a protected community is not a comfortable one, it is an ambitious one." },
 
-    { kind:"wheel", stage:1, phase:"The strategy",
+    { kind:"wheel", stage:1, phase:"The flywheel",
       prose:"Stage one. A community with something to spare, however modest." },
-    { kind:"wheel", stage:2, phase:"The strategy",
-      prose:"Stage two. That surplus is what lets the community catch its own. A safety net, but funded and run close to home rather than administered from the centre." },
-    { kind:"wheel", stage:3, phase:"The strategy",
-      prose:"Stage three, and this is the stage that is easy to miss. Being caught is not the benefit. Knowing you would be caught is the benefit, because that is what changes behaviour before anything has gone wrong." },
-    { kind:"wheel", stage:4, phase:"The strategy",
+    { kind:"wheel", stage:2, phase:"The flywheel",
+      prose:"Stage two. That surplus is what lets the community catch its own when they fall." },
+    { kind:"wheel", stage:3, phase:"The flywheel",
+      prose:"Stage three, and this is the one that is easy to miss. Being caught is not the benefit. Knowing you would be caught is the benefit, because that is what changes behaviour before anything has gone wrong." },
+    { kind:"wheel", stage:4, phase:"The flywheel",
       prose:"Stage four. People who feel safe start things. They retrain, they take the job with the lower floor and the higher ceiling, they open the workshop." },
-    { kind:"wheel", stage:5, phase:"The strategy",
-      prose:"Stage five. Those risks, in aggregate, make the community stronger, which means it can catch more people, which frees more people to rise. The wheel is now turning under its own power." },
+    { kind:"wheel", stage:5, phase:"The flywheel",
+      prose:"Stage five. The community grows stronger, and round again. NZF starts the wheel. Once it is turning, the community keeps it spinning." },
 
-    { phase:"The strategy", eyebrow:"Making it physical",
-      mid:"A communal fund the community pays into and draws from.",
-      sub:"Not a metaphor. A real pot, with real governance, that people recognise as theirs.",
-      prose:"The flywheel stays an idea until there is something people can see, pay into and draw from. As people are steadied and begin to prosper they give back, and as they see what it does, more join and more pay in. The fund is not hoarded. What grows is its annual reach." },
+    { phase:"The flywheel", eyebrow:"The crossover",
+      big:"Demand falls.<br>Ambition <b>rises</b>.",
+      sub:"As the community strengthens, chronic need falls away into one-off crises: a job lost, an illness. At that crossover the same effort concentrates into fewer, larger, transformational moves.",
+      prose:"Relief gives way to empowerment not by strategy or argument, but because the community is finally ready. In most organisations this is a permanent internal fight settled by whoever holds the budget that year. Here it is settled by conditions on the ground." },
 
-    { phase:"The strategy", eyebrow:"The crossover",
-      big:"Then the shift.",
-      sub:"As the community strengthens, need moves from chronic hardship to one-off crisis. At that crossover the same fund does something bigger: fewer, larger, transformational investments. Enterprise, skills, youth.",
-      prose:"Chronic need is a floor problem and it absorbs almost everything. One-off crisis is a far lighter load. When that changes, capacity is released, and the same fund can start making the small number of large bets that move a community rather than the large number of small ones that hold it steady." },
+    { kind:"wall", block:"q1", phase:"Questions", eyebrow:"Before we go on · 8 minutes",
+      prompt:"Questions on the flywheel. What doesn't hold?",
+      placeholder:"Send them in, or just say it out loud.",
+      prose:"The model, the bet underneath it, the crossover. Press on any of it before we get to how it would actually work." },
 
-    { phase:"The strategy", eyebrow:"Why that matters",
-      mid:"Relief versus empowerment stops being an argument anyone has to win.",
-      sub:"The community's own progress moves the money. It sequences itself.",
-      prose:"In most organisations this is a permanent internal fight, settled by whoever holds the budget that year and reopened the next. Here it is settled by conditions on the ground. While chronic need is high the money sits in relief because that is what the need demands. As need falls, the same rule moves it up the ladder." },
+    /* ---------------- BLOCK TWO: THE FUND AND THE THREAD ---------------- */
 
-    { phase:"The strategy", eyebrow:"Our role",
+    { phase:"The fund", eyebrow:"Making it physical",
+      big:"The flywheel is a mechanism.<br>The <b>fund</b> is what makes it real.",
+      sub:"A communal pot the community pays into and draws from. All of it zakat.",
+      prose:"The flywheel stays an idea until there is something people can see, pay into and draw from." },
+
+    { phase:"The fund", eyebrow:"One fund, changing character",
+      mid:"Early on it catches people. Later it launches them.",
+      list:[
+        ["Early","High chronic need. It behaves like a safety net. High volume, low value."],
+        ["Later","Giving grows, chronic need falls into occasional shocks."],
+        ["Then","Fewer, larger, transformational investments instead of many small relief payments."]
+      ],
+      prose:"One fund that changes character as the place it serves changes, not a separate pot switched on later. That distinction matters, because a second pot would need a decision by someone. This needs only the community to get stronger." },
+
+    { phase:"The fund", eyebrow:"The biggest open question in the model",
+      big:"One national pot, or a national standard with <b>local funds</b> under it?",
+      sub:"Genuinely undecided, and probably the single biggest design decision in the whole thing.",
+      prose:"A single national pot gives consistency and scale. Federated local funds give ownership and speed, and make the fund feel like the community's rather than ours. This gets picked up again properly in the partnerships session." },
+
+    { kind:"tiers", phase:"The golden thread", eyebrow:"The golden thread",
+      mid:"Three tiers, all zakat funded",
+      prose:"This is what stitches the fund to the day to day. People enter at whichever tier fits their need, rather than starting at the bottom and working up." },
+
+    { phase:"The golden thread", eyebrow:"How people move",
+      mid:"The full journey through all three is the model working end to end. It is not the average case.",
+      sub:"Most people need one tier. Some need two. The point is that the route exists at all.",
+      prose:"Yusuf's father got tier one at best, and only by selling gold rather than asking. Yusuf gets caught, steadied, and then backed to build something. That whole route through the thread is what the model is for, even though most cases will never travel all of it." },
+
+    { phase:"The golden thread", eyebrow:"What we haven't settled",
+      mid:"What actually moves someone from one tier to the next?",
+      sub:"Right now it is a judgement call based on need, not a formal trigger.",
+      prose:"Whether that becomes a marker, a criterion or stays a judgement is open, and it lands directly on programmes, quality and impact, customer service and technology. That is the next layer of thinking rather than this one." },
+
+    { phase:"Our role", eyebrow:"NZF's role",
       big:"Catalyst, not cornerstone.",
       list:[
         ["01","Start the wheel. Deliver the net, seed the fund, set one national standard."],
-        ["02","Build on what is already there. Grassroots infrastructure, local ownership."],
-        ["03","Then step back, and go where the wheel has not started turning."]
+        ["02","Build on what exists. Grassroots infrastructure is already there."],
+        ["03","Then step back. Once it turns, the community keeps it spinning."],
+        ["04","Measure it the hard way."]
       ],
-      prose:"NZF starts the wheel. It does not have to be the wheel. There is real grassroots infrastructure in these communities already, and the job is national coherence with local ownership rather than one national body delivering everywhere forever." },
+      prose:"The aim was never to be the charity a community depends on in a crisis. It is to build communities strong enough to be their own safety net." },
 
-    { phase:"The strategy", eyebrow:"The measure",
-      big:"Where we most succeed,<br>we are needed <b>less</b>.",
-      sub:"Not more.",
-      prose:"Almost no charity will say this, because the incentives forbid it. Growth in reach is the usual proxy for success, and it quietly rewards permanent dependence. The honest measure of this model is communities that graduate off support, and an organisation that moves on to where the wheel has not started." },
+    { phase:"Our role", eyebrow:"The measure",
+      big:"Success is being needed <b>less</b> over time.",
+      sub:"Not a bigger fund with a bigger caseload.",
+      prose:"Almost no charity will say this, because the incentives forbid it. Reach is the usual proxy for success and it quietly rewards permanent dependence." },
 
-    { kind:"story", pos:0, year:"2026", label:"Ten years on · his father", phase:"The strategy",
+    { phase:"Our role", eyebrow:"What isn't settled",
+      mid:"Five things this rests on that aren't yet answered",
+      list:[
+        ["01","The engine. Does giving really rise as people see impact? The whole flywheel depends on it."],
+        ["02","The fund's shape. One national pot, or a national standard with federated local funds."],
+        ["03","The tier trigger. Judgement, or a marker."],
+        ["04","Zakat eligibility. How this stays inside it as people move from receiving to contributing."],
+        ["05","Needed less. Operationally, with communities graduating off support, or is the centre permanent."]
+      ],
+      prose:"These are the weakest points and they are on the table rather than buried. If you are looking for where to push hardest, push here. The fourth one in particular is the question most likely to decide whether this is credible." },
+
+    { kind:"wall", block:"q2", phase:"Questions", eyebrow:"Before the last part · 8 minutes", tone:"r",
+      prompt:"Questions on the fund, the thread, and the five open ones.",
+      placeholder:"Push on the weak points. That's what they're up there for.",
+      prose:"This is the block where the hard questions belong. The five unsettled things are the obvious place to start." },
+
+    /* ---------------- BLOCK THREE: THE OUTCOME ---------------- */
+
+    { kind:"story", pos:0, year:"2026", label:"The outcome · his father", phase:"Yusuf, 2036",
       prose:"When his father was made redundant, Yusuf was fourteen. He remembers the quiet in the house, the quiet of adults doing sums at the kitchen table.\n\nThey did not ask for help. Asking meant a form, a stranger, a decision made about you. His mother sold her gold instead." },
 
-    { kind:"story", pos:0.58, year:"2036", label:"The same age his father was", phase:"The strategy",
+    { kind:"story", pos:0.58, year:"2036", label:"The same age his father was", phase:"Yusuf, 2036",
       prose:"Ten years on, Yusuf is made redundant himself. This time none of that happens.\n\nHis local fund catches the family within the week. Not a caseworker and a wait. A top-up he had half forgotten he paid into, handled by people he knows.\n\nThe fall he is bracing for never comes." },
 
-    { kind:"story", pos:0.68, year:"+3 months", label:"What his father's generation would not recognise", phase:"The strategy",
+    { kind:"story", pos:0.68, year:"+3 months", label:"What his father's generation would not recognise", phase:"Yusuf, 2036",
       prose:"Steadied, he does not go back to the job he lost.\n\nHe starts the small workshop he would never have risked with a mortgage and no net. The same fund that caught him now backs him. A stake, and a mentor two streets over." },
 
-    { kind:"story", pos:0.80, year:"2038", label:"The wheel turning", phase:"The strategy",
+    { kind:"story", pos:0.80, year:"2038", label:"The wheel turning", phase:"Yusuf, 2036",
       prose:"He employs three people.\n\nTwo were once caught by the fund. One now pays in." },
 
-    { kind:"story", pos:0.88, year:"By then", label:"Where we are in this story", phase:"The strategy",
-      prose:"He could not tell you what NZF is. To him it is just the fund, and the fund is just what his community does.\n\nIn his area, one of the strong ones now, that national body does very little. It moved on to the places where the wheel has not started turning yet." },
+    { kind:"story", pos:0.88, year:"By then", label:"Where we are in this story", phase:"Yusuf, 2036",
+      prose:"He could not tell you what NZF is. To him it is just the fund, and the fund is just what his community does.\n\nIn his area, one of the strong ones now, that national body does little any more. It has moved on to the places where the wheel has not started spinning yet." },
 
-    { kind:"story", pos:1, year:"She is nine", label:"His daughter", phase:"The strategy",
+    { kind:"story", pos:1, year:"She is nine", label:"His daughter", phase:"Yusuf, 2036",
       prose:"She will grow up never knowing the quiet at the kitchen table. Assuming, the way you assume the lights come on, that if her family falls the community catches them.\n\nShe will take risks her grandfather could not have imagined, because she will never feel the fear that shaped him." },
 
-    { kind:"story", pos:1, payoff:"The whole vision, in one girl who will never know she is the <b>point</b> of it.", phase:"The strategy",
+    { kind:"story", pos:1, payoff:"The whole vision, in one girl who will never know she is the <b>point</b> of it.", phase:"Yusuf, 2036",
       prose:"The whole vision, in one girl who will never know she is the point of it." },
 
-    { phase:"The strategy", eyebrow:"What isn't proven",
-      mid:"Three things this rests on that I can't yet evidence",
-      list:[
-        ["01","The engine. Does giving actually rise as people see impact? The whole flywheel depends on this and it needs evidence, not assertion."],
-        ["02","The starting push. What exactly does NZF inject to get the wheel turning in a community without resources?"],
-        ["03","Needed less. Do we mean that operationally, celebrating communities that graduate off support, or is the centre permanent?"]
-      ],
-      prose:"These are the weakest points in the argument and they are on the table rather than buried. If you are looking for where to push hardest, push here." },
+    /* ---------------- BREAKOUT AND CLOSE ---------------- */
 
-    { kind:"wall", block:"b1", phase:"Breakout one", eyebrow:"In your groups · 15 minutes",
-      prompt:"What didn't land, and what do you want pressed on?",
-      placeholder:"Short and unfiltered. One point per send.",
-      prose:"Fifteen minutes in your groups. This block is for surfacing rather than solving, so nothing needs to be worked through or made polite first." },
-
-    { kind:"wall", block:"b2", phase:"Breakout two", eyebrow:"In your groups · 30 minutes", tone:"r",
+    { kind:"wall", block:"b2", phase:"In your groups", eyebrow:"Mixed groups · 30 minutes", tone:"r",
       prompt:"What would have to be true for this to work in the work you do? And where does it sit hardest against what you do now?",
       placeholder:"Be specific to your own patch. The harder the better.",
-      prose:"Thirty minutes, mixed groups, so a CZP perspective is in the room while housing is being discussed and the other way round. The question is not whether this is the right direction, it is what the direction would demand of your area and where it grinds against how things work today." },
+      prose:"Thirty minutes, mixed groups of three or four, so a CZP perspective is in the room while housing is being discussed and the other way round. The question is not whether this is the right direction, it is what the direction would demand of your area and where it grinds against how things work today." },
 
-    { kind:"show", show:["b1","b2"], phase:"Discussion", eyebrow:"Back together · 30 minutes",
+    { kind:"show", show:["q2","b2"], phase:"Back together", eyebrow:"Last twenty minutes",
       mid:"Everything you sent, on the screen",
       prose:"We work through the sharpest points in the open, then decide what goes in the one remaining open slot on the agenda." }
   ]
 },
-
 partnerships: {
   title:"Partnerships",
   when:"Wednesday 30 September, 14:00 to 15:15",
@@ -799,6 +853,18 @@ close: {
 }
 };
 
+var TIERS = [
+  { name:"Emergency", tag:"CZP",
+    shape:"High volume, low value, community-led",
+    does:"Catches the fall. Food on the table, so that today and tomorrow stop being the whole worry." },
+  { name:"Stabilisation", tag:"",
+    shape:"Case-based, wraparound, referral-driven",
+    does:"Solves the specific shock. A stipend for job loss, funded care, housing." },
+  { name:"Empowerment", tag:"",
+    shape:"Building blocks",
+    does:"Jobs, skills, alumni and peer networks, and funding to build further and become prosperous." }
+];
+
 var AGENDA = [
   { day:"Day one", date:"Wednesday 30 September 2026", note:"Finishes 6:00pm", rows:[
     { t:"10:30", title:"Arrival", brk:true },
@@ -841,8 +907,12 @@ function allWallBlocks(){
     SESSIONS[k].beats.forEach(function(b){
       if(b.block) set[b.block]=1;
       if(b.show) b.show.forEach(function(x){set[x]=1;});
-      if(b.left) set[b.left]=1;
-      if(b.right) set[b.right]=1;
+      /* only the compare beat uses left/right as block ids; on a spectrum
+         beat they are the endpoint labels, not blocks. */
+      if(b.kind==="compare"){
+        if(b.left) set[b.left]=1;
+        if(b.right) set[b.right]=1;
+      }
     });
   });
   return Object.keys(set);
@@ -881,8 +951,6 @@ var STORE = {
    Supabase pushes instead of polling, so this does not apply to it. */
 var WALL_SCREEN = location.search.indexOf("wall") > -1;
 
-var STORE_READY = false;
-
 function noteStore(msg){
   var el=document.getElementById("storeNote");
   if(el){ el.textContent=msg; el.hidden=!msg; }
@@ -890,7 +958,6 @@ function noteStore(msg){
 
 /* ---- none: local only ---- */
 function initNone(){
-  STORE_READY = true;
   noteStore("Live responses are not connected. Anything you send stays on this device.");
 }
 
@@ -902,7 +969,7 @@ function initSupabase(){
     try{
       var sb=window.supabase.createClient(STORE.supabase.url, STORE.supabase.anonKey);
       await sb.auth.signInAnonymously();
-      STORE.client=sb; STORE_READY=true; noteStore("");
+      STORE.client=sb; noteStore("");
 
       async function pullWalls(){
         var r=await sb.from("submissions").select("block,text,at").order("at",{ascending:false});
@@ -930,30 +997,30 @@ function initSupabase(){
         .on("postgres_changes",{event:"*",schema:"public",table:"submissions"},pullWalls)
         .on("postgres_changes",{event:"*",schema:"public",table:"picks"},pullPicks)
         .subscribe();
-    }catch(e){ console.error("[store]",e); noteStore("Response store error: "+(e&&e.message?e.message:"unknown")+" — the site still works."); }
+    }catch(e){
+      console.error("[store]",e);
+      noteStore("Response store error: "+(e&&e.message?e.message:"unknown")+" — the site still works.");
+    }
   };
   s.onerror=function(){ noteStore("Could not load the response store. The site still works."); };
   document.head.appendChild(s);
 }
 
 /* ---- jsonbin ---- */
-var JB_STATE={submissions:[],picks:{}};
 function jbUrl(){ return "https://api.jsonbin.io/v3/b/"+STORE.jsonbin.binId; }
 function jbHeaders(){ return {"Content-Type":"application/json","X-Access-Key":STORE.jsonbin.accessKey}; }
 
 async function jbRead(){
   var r=await fetch(jbUrl()+"/latest",{headers:jbHeaders()});
-  if(!r.ok) throw new Error("read");
-  var j=await r.json();
-  var rec=j.record||{};
+  if(!r.ok) throw new Error("read failed");
+  var j=await r.json(), rec=j.record||{};
   return {submissions:rec.submissions||[], picks:rec.picks||{}};
 }
 async function jbWrite(state){
   var r=await fetch(jbUrl(),{method:"PUT",headers:jbHeaders(),body:JSON.stringify(state)});
-  if(!r.ok) throw new Error("write");
+  if(!r.ok) throw new Error("write failed");
 }
 function jbApply(state){
-  JB_STATE=state;
   allWallBlocks().forEach(function(b){ WALLS[b]=[]; });
   (state.submissions||[]).forEach(function(s){
     WALLS[s.block]=WALLS[s.block]||[]; WALLS[s.block].push({text:s.text,at:s.at});
@@ -968,16 +1035,15 @@ function jbApply(state){
 }
 async function initJsonbin(){
   try{
-    jbApply(await jbRead()); STORE_READY=true; noteStore("");
+    jbApply(await jbRead()); noteStore("");
     if(WALL_SCREEN){
-      setInterval(async function(){
-        try{ jbApply(await jbRead()); }catch(e){}
-      }, Math.max(3000, STORE.jsonbin.pollMs));
+      setInterval(async function(){ try{ jbApply(await jbRead()); }catch(e){} },
+                  Math.max(3000, STORE.jsonbin.pollMs));
     }
   }catch(e){ noteStore("Could not reach the response store. The site still works."); }
 }
-/* read, append, write, then re-read and confirm it landed. Retries because
-   a whole-bin write can be overwritten by someone submitting at the same moment. */
+/* read, append, write, then re-read and confirm it landed. Retries because a
+   whole-bin write can be overwritten by someone submitting at the same moment. */
 async function jbCommit(mutate, verify){
   for(var attempt=0; attempt<4; attempt++){
     try{
@@ -993,7 +1059,6 @@ async function jbCommit(mutate, verify){
   return false;
 }
 
-/* ---- public API used by the rest of the page ---- */
 (function initStore(){
   if(STORE.mode==="supabase" && STORE.supabase.url) return initSupabase();
   if(STORE.mode==="jsonbin"  && STORE.jsonbin.binId) return initJsonbin();
@@ -1017,7 +1082,6 @@ async function sendWall(block,text){
       function(st){ return (st.submissions||[]).some(function(s){ return s.id===mark; }); }
     );
   }
-  // none
   WALLS[block]=WALLS[block]||[];
   WALLS[block].unshift({text:clean,at:stamp});
   paintWall(block);
@@ -1029,6 +1093,7 @@ async function savePick(exercise,values){
 
   if(STORE.mode==="supabase" && STORE.client){
     var r=await STORE.client.from("picks").upsert({id:key,exercise:exercise,payload:values,at:stamp});
+    if(r.error){ console.error("[store] upsert failed",r.error); noteStore("Could not send: "+r.error.message); }
     return !r.error;
   }
   if(STORE.mode==="jsonbin" && STORE.jsonbin.binId){
@@ -1037,12 +1102,11 @@ async function savePick(exercise,values){
       function(st){ return !!(st.picks&&st.picks[key]); }
     );
   }
-  // none
-  PICKS[exercise]=(PICKS[exercise]||[]).filter(function(_,i){ return i!==0; });
-  PICKS[exercise].unshift(values);
+  PICKS[exercise]=[values];
   paintExercise(exercise);
   return true;
 }
+
 function localPick(ex){ try{ return JSON.parse(localStorage.getItem("bstd_p_"+ex)||"{}"); }catch(e){ return {}; } }
 function setLocalPick(ex,v){ try{ localStorage.setItem("bstd_p_"+ex,JSON.stringify(v)); }catch(e){} }
 
@@ -1053,7 +1117,7 @@ function paintWall(block){
     var tone=el.getAttribute("data-tone")==="r"?" r":"";
     el.innerHTML = list.length
       ? list.map(function(s){return '<div class="card'+tone+'">'+esc(s.text)+'</div>';}).join("")
-      : '<div class="empty">'+(window.WALL_SCREEN===false&&STORE.mode==="jsonbin"?'Responses are showing on the main screen.':'Nothing yet. Responses appear here live.')+'</div>';
+      : '<div class="empty">'+((typeof WALL_SCREEN!=="undefined"&&!WALL_SCREEN&&STORE.mode==="jsonbin")?'Responses are showing on the main screen.':'Nothing yet. Responses appear here live.')+'</div>';
   });
   document.querySelectorAll('[data-count="'+block+'"]').forEach(function(el){
     var n=list.length; el.textContent = n===1?"1 response":n+" responses";
@@ -1187,6 +1251,18 @@ function cLadder(b,flat){
   '</div>';
 }
 
+function cTiers(){
+  return '<div class="thread">'+ TIERS.map(function(t,i){
+    return '<div class="tier">'+
+      '<h5><span class="tname">'+esc(t.name)+'</span>'+
+        (t.tag?'<span class="ttag">'+esc(t.tag)+'</span>':'')+
+        '<span class="tnum">Tier '+(i+1)+'</span></h5>'+
+      '<div class="tshape">'+esc(t.shape)+'</div>'+
+      '<div class="tdoes">'+esc(t.does)+'</div>'+
+    '</div>';
+  }).join("") + '<div class="tentry">People enter at whichever tier fits their need</div></div>';
+}
+
 function component(b){
   if(b.kind==="wall") return cWall(b);
   if(b.kind==="show") return cShow(b);
@@ -1195,6 +1271,7 @@ function component(b){
   if(b.kind==="allocate") return cAllocate(b);
   if(b.kind==="ladder") return cLadder(b,false);
   if(b.kind==="pick") return cLadder(b,true);
+  if(b.kind==="tiers") return cTiers();
   return "";
 }
 
@@ -1458,34 +1535,47 @@ function pageVision(){
   '</section>'+
 
   sec("05 · THE FUND","Making the wheel physical",[
-    "A flywheel stays an idea until there is something people can actually see, pay into and draw from. So the model makes it concrete: a communal fund, belonging to the community, with real governance.",
-    "Early on it does what relief does now. It catches people, quickly, close to home, without the form and the stranger and the decision made about you. As people are steadied and begin to prosper, they give back. And as more people see what it does, more join and more pay in.",
-    "The fund is not hoarded and the point is not a growing balance sheet. What grows is its annual reach."
+    "The flywheel is a mechanism. The fund is what makes it physical: a communal pot the community pays into and draws from, all of it zakat.",
+    "Early on, in a place with high chronic need, it behaves like a safety net. It catches people, quickly and close to home, without the form and the stranger and the decision made about you. High volume, low value.",
+    "As the community strengthens and giving grows, and as chronic need falls away into occasional shocks, the same fund does something different: fewer, larger, transformational investments instead of many small relief payments.",
+    "It is one fund that changes character as the place it serves changes, not a separate pot switched on later. That distinction matters more than it sounds, because a second pot would need somebody to decide to open it. This needs only the community to get stronger.",
+    "Whether it is one national pot, or a national standard with local federated funds under it, is still open. It is probably the single biggest design decision in the whole model."
   ])+
 
-  sec("06 · THE CROSSOVER","The same fund, doing something bigger",[
+  '<section class="readblock narrow"><div class="beatnum">06 · THE GOLDEN THREAD</div>'+
+  '<div class="beathead">Three tiers, all zakat funded</div>'+
+  '<p>This is what stitches the fund to the day to day. People enter at whichever tier fits their need rather than starting at the bottom and working up.</p>'+
+  cTiers()+
+  '<p style="margin-top:15px">The full journey through all three, the way Yusuf travels it, is the model working end to end. It is not the average case. Most people will need one tier, some will need two, and the point is that the route exists at all.</p>'+
+  '<p style="margin-top:15px">What actually moves someone from one tier to the next is, at the moment, a judgement call based on need rather than a formal trigger. What that becomes, and what each tier asks of programmes, quality and impact, customer service and technology, is the next layer of thinking rather than this one.</p>'+
+  '</section>'+
+
+  sec("07 · THE CROSSOVER","The same fund, doing something bigger",[
     "Then comes the shift that makes this different from simply doing relief better.",
     "As a community strengthens, the shape of its need changes. Chronic hardship, the permanent floor problem that absorbs almost everything, gives way to one-off crisis: a job lost, an illness, a sudden bill. That is a far lighter load to carry, and carrying it releases capacity.",
     "At that crossover the same fund starts doing something bigger. Fewer, larger, transformational investments. Enterprise. Skills. Youth. Springboards that do not just catch people but launch them.",
     "This is the part worth understanding properly, because it is what makes the model self-sequencing. In most organisations relief versus empowerment is a permanent internal argument, settled by whoever holds the budget that year and reopened the next. Here nobody has to win it. While chronic need is high the money sits in relief, because that is what the need demands. As need falls, the same rule moves the money up the ladder. The community's own progress decides."
   ])+
 
-  sec("07 · OUR ROLE","Catalyst, not cornerstone",[
+  sec("08 · OUR ROLE","Catalyst, not cornerstone",[
     "NZF starts the wheel. It does not have to be the wheel.",
     "That means three things in practice. Deliver the net and seed the fund, so there is something to start with. Set one national standard, so that being caught does not depend on your postcode. And build on the grassroots infrastructure that already exists in these communities rather than duplicating it, which means national coherence with local ownership.",
     "And then step back, and go to the places where the wheel has not started turning yet."
   ])+
 
-  sec("08 · THE MEASURE","Success is being needed less",[
+  sec("09 · THE MEASURE","Success is being needed less",[
     "Almost no charity will say this out loud, because the incentives forbid it. Reach is the standard proxy for success, and it quietly rewards permanent dependence: the more people who need you, the better you appear to be doing.",
     "If this model works, the opposite happens. Communities graduate off support. Our presence in the strongest places thins out. The honest measure is not how many people we caught this year, it is how many places no longer need us to."
   ])+
 
-  sec("09 · WHAT ISN'T PROVEN","The three open questions",[
-    "This is a serious bet rather than a finished plan, and three things it rests on cannot yet be evidenced. They are worth knowing before Wednesday, because they are the best places to push.",
-    "First, the engine. The model assumes that giving rises as people see impact. That assumption carries the entire flywheel, and it currently rests on reasoning rather than data. If it is wrong, the wheel does not turn on its own.",
-    "Second, the starting push. What exactly does NZF inject into a community with no surplus to get the wheel moving? Money is the obvious answer and probably not the whole one.",
-    "Third, needed less. Do we mean that operationally, with real communities graduating off support and a centre that shrinks in those places, or is it a figure of speech and the centre is permanent? Those are two very different organisations in 2036."
+  sec("10 · WHAT ISN'T SETTLED","Five open questions",[
+    "This is a concept rather than a plan. It is meant to show a direction and be built on, not signed off. Five things it rests on are not yet answered, and they are the best places to push on Wednesday.",
+    "The engine. The model assumes giving rises as people see impact. That assumption carries the entire flywheel and currently rests on reasoning rather than data. If it is wrong, the wheel does not turn on its own.",
+    "The fund's shape. One national pot, or a national standard with local federated funds beneath it. Consistency and scale on one side, ownership and speed on the other.",
+    "The tier trigger. What actually moves someone from emergency to stabilisation to empowerment. Judgement, or a marker.",
+    "Zakat eligibility. How this stays inside it as people move from receiving to contributing. This is the question most likely to decide whether the whole thing is credible, and it has not been worked through.",
+    "Needed less. Do we mean it operationally, with real communities graduating off support and a centre that shrinks in those places, or is it a figure of speech? Those are two very different organisations in 2036.",
+    "There is a sixth worth noting, which is the starting push. What exactly does NZF inject into a community with no surplus to get the wheel moving. Money is the obvious answer and probably not the whole one."
   ]);
 }
 
@@ -1495,7 +1585,7 @@ function pageReading(){
   '<p class="lede">One thing, and it is short on purpose. Session one assumes you have read it.</p></section>'+
   '<span class="phase">Essential</span>'+
   '<div class="readitem"><div><h4><a href="#/vision" style="text-decoration:none;border-bottom:1px solid var(--line)">The vision</a></h4>'+
-  '<p>The full argument for where programmes go over the next ten years: why relief on its own does not move people, the flywheel and the communal fund behind it, what NZF\'s role becomes, and the three things the model rests on that cannot yet be evidenced. Wednesday morning starts from the assumption that everyone has read this, so it can go deeper instead of starting from scratch.</p></div><span class="mins">10 min</span></div>'+
+  '<p>The full argument for where programmes go over the next ten years: why relief on its own does not move people, the flywheel and the communal fund behind it, the fund and the golden thread that connect it to the day to day, what NZF\'s role becomes, and the five things that are not yet settled. Wednesday morning starts from the assumption that everyone has read this, so it can go deeper instead of starting from scratch.</p></div><span class="mins">12 min</span></div>'+
 
   '<span class="phase">One per session, if you have time</span>'+
   '<p class="small" style="max-width:62ch;margin-bottom:6px">Each of the three theme sessions draws on the thinking in one piece of sector reading. Not required, but the sessions will refer to them.</p>'+
@@ -1573,8 +1663,9 @@ function pageVenue(){
 function pageOutputs(){
   var blocks=[
     ["opening","Before we started · what is NZF for"],
-    ["b1","Session one, breakout one · what didn't land"],
-    ["b2","Session one, breakout two · what would have to be true"],
+    ["q1","Session one · questions on the flywheel"],
+    ["q2","Session one · questions on the fund and the open ones"],
+    ["b2","Session one, breakout · what would have to be true"],
     ["partnerships-line","Partnerships · non-negotiables and habits"],
     ["targeting-change","Targeting · what would have to change"],
     ["open-suggest","Open slot · suggestions"],
